@@ -17,7 +17,7 @@ Namelist,Datasets and Scripts
 Namelist
 ===================
 
-The case runs are initialized at 00z Jul 11, 2019 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.
+The case runs are initialized at 12z Oct 25, 2019 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.
 
 
 .. table:: Table Namelist options
