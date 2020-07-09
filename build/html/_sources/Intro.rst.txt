@@ -13,9 +13,6 @@ This document provides case studies evaluation results for the UFS WM using the 
 
 The goal of this ongoing effort is to provide the community with a model testing platform where they can use the resources to conduct model runs and evaluate the model performance for representative meteorological cases. These case studies will provide insights for future model developments in aim to improve NOAA numerical weather forecasts. 
 
-..................
-Case Catalogue
-..................
 The below case catalogue is created based on the known biases of the UFS WM. This is a list that we are updating diligently. Please come back to check updates anytime.
 
 * 2019 Hurricane Barry
