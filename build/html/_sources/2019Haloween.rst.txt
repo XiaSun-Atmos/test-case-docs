@@ -8,16 +8,16 @@
 2019 Halloween Storm
 =====================================
 
-Belongs to 2019 Halloween storm   
+The 2019 Halloween storm stroke the eastern U.S. cities with wind gusts, thunderstorms, and flash flooding. 
 
 ..............................
-Namelist,Datasets and Scripts
+Namelist, Datasets and Scripts
 ..............................
 ===================
 Namelist
 ===================
 
-The case runs are initialized at 00z Jul 11, 2019 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.
+The case runs are initialized at 12z Oct 25, 2019 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.
 
 
 .. table:: Table Namelist options

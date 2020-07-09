@@ -8,10 +8,10 @@
 2019 Halloween Storm
 =====================================
 
-Belongs to 2019 Halloween storm   
+The 2019 Halloween storm stroke the eastern U.S. cities with wind gusts, thunderstorms, and flash flooding. 
 
 ..............................
-Namelist,Datasets and Scripts
+Namelist, Datasets and Scripts
 ..............................
 ===================
 Namelist

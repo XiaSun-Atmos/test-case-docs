@@ -8,10 +8,10 @@
 =====================================
 
 
-Hurricane Barry made landfall in Louisiana on July 11, 2019. The peak wind speed and minimum pressure reached 72 mph and  992 hPa, respectively during the storm. 
+Hurricane Barry made landfall in Louisiana on July 11, 2019. The peak wind speed and minimum pressure reached 72 mph and 992 hPa, respectively during the storm. 
 
 ...........
-Namelist,Datasets and Scripts
+Namelist, Datasets and Scripts
 ...........
 ===================
 Namelist
@@ -46,15 +46,15 @@ Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio 
 
 The Stand-alone Geophysical Fluid Dynamics Laboratory(GFDL) Vortex Tracker is a tool to estimate hurricane tracks and intensities. The BestTrack dataset provides the ‘truth’ data for hurricane evolution.
 
-* `Dowload the 2019 July Hurricane Barry Best Track data <https://domain.invalid/>`_ 
+* `Download the 2019 July Hurricane Barry Best Track data <https://domain.invalid/>`_ 
 
 ====================================
 Scripts
 ====================================
 Below are example post-processing scripts used to do the plots.
 
-* `Dowload the example script for hurricane tracks and intensities <https://domain.invalid/>`_ 
-* `Dowload the example script for time series of maximum wind speed and minimum sea level pressure  <https://domain.invalid/>`_ 
+* `Download the example script for hurricane tracks and intensities <https://domain.invalid/>`_ 
+* `Download the example script for time series of maximum wind speed and minimum sea level pressure  <https://domain.invalid/>`_ 
 
 ..............
 Case Results
@@ -65,7 +65,7 @@ Hurricane Track and Intensity
 ==============================
 
 .. figure:: images/tracker_Barry_ufsv1.png
-  :width: 600
+  :width: 500
   :align: center
 
 ====================================
@@ -73,7 +73,7 @@ Time Series of Max. WS and Min. MSLP
 ====================================
 
 
-.. |logo1| image:: images/tracker_mslp_Barry_ufsv1.png   
+.. |logo1| image:: images/tracker_ws_Barry_ufsv1.png   
    :width: 600
    :align: middle
 
@@ -85,3 +85,51 @@ Time Series of Max. WS and Min. MSLP
 +---------+---------+
 | |logo1| | |logo2| |
 +---------+---------+
+
+====================================
+Comparison with Satellite Image (f072)
+====================================
+
+.. |logo3| image:: images/FV3_OLR_00zJul11_12zJul14_GFS_f72_v16beta.png  
+   :width: 600
+   :align: middle
+
+
+.. |logo4| image:: images/FV3_OLR_00zJul11_12zJul14_GFS_f72_15p2.png 
+   :width: 600
+   :align: middle
+
+.. |logo5| image:: images/worldview_2019071400.png 
+   :width: 250
+   :align: middle
+
++---------+---------+
+| |logo3| | |logo4| |
++---------+---------+
+| |logo5| |         |
++---------+---------+
+
+=============================================
+Hovmöller diagram of 850 hPa WS after Landfall
+=============================================
+
+.. |logo6| image:: images/Ufs_GFS_v16beta_cross_WS_radial_timeseries.png  
+   :width: 600
+   :align: middle
+
+
+.. |logo7| image:: images/Ufs_GFS_15p2_cross_WS_radial_timeseries.png 
+   :width: 600
+   :align: middle
+
+.. |logo8| image:: images/Ufs_GFS_GFS_NCEP_cross_WS_radial_timeseries.png 
+   :width: 600
+   :align: top
+
++---------+---------+
+| |logo6| | |logo7| |
++---------+---------+
+| |logo8| |         |
++---------+---------+
+
+

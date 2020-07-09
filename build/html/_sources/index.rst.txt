@@ -10,9 +10,10 @@ Welcome to the Test Cases Page for the UFS weather model
    :numbered:
    :maxdepth: 3
    
-   CaseCatalogue.rst
+   Intro.rst
    2019Barry.rst
    2019Haloween.rst
+   2017DenverPBL.rst
 
 
 
