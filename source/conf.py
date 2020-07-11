@@ -50,7 +50,8 @@ exclude_patterns = []
 #
 import sphinx_rtd_theme
 master_doc = 'index'
-#extensions = [
+extensions = ['sphinx.ext.autosectionlabel',]
+
 #    ...
 #    "sphinx_rtd_theme",
 #]

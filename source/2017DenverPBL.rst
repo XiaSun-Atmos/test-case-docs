@@ -49,8 +49,9 @@ Sounding profiles can be downloaded from the `University of Wyoming <http://weat
 Scripts
 ====================================
 
-An example Python script is provided below to do the Skew-T Log-P plots for the observed and simulated sounding profiles. Indices for sounding analysis (e.g. cap strength) are also calculated and shown at the bottom of the plot. This script is adapted from `SHARPpy <http://sharp.weather.ou.edu/dev/>`_. Data format needs to comply with `SHARPpy requirements <https://sharppy.github.io/SHARPpy/datasource_guide.html>`_. 
+An example Python script is provided below to do the Skew-T Log-P plots for the observed and simulated sounding profiles. Indices for sounding analysis (e.g. lapse rate) are also calculated and shown at the bottom of the plot. This script is adapted from `SHARPpy <http://sharp.weather.ou.edu/dev/>`_. Data format needs to comply with `SHARPpy requirements <https://sharppy.github.io/SHARPpy/datasource_guide.html>`_. 
 
+* `Download the example script for Skew-T Log-P plot <https://domain.invalid/>`_ 
 
 ..............
 Case Results
@@ -60,12 +61,12 @@ Case Results
 Skew-T Log-P Plot
 ======================================================
 
-.. |logo1| image:: images/2017101700_84z_DNR_16betavsObs_indices.png   
+.. |logo1| image:: images/2017101700_84z_DNR_16betavsObs_indices-1.png   
    :width: 600
    :align: middle
 
 
-.. |logo2| image:: images/2017101700_84z_DNR_15p2vsObs_indices.png
+.. |logo2| image:: images/2017101700_84z_DNR_15p2vsObs_indices-1.png
    :width: 600
    :align: top
 
