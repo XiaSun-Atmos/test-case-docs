@@ -169,7 +169,7 @@
 <h2><span class="section-number">4.1. </span>Namelist,Datasets and Scripts<a class="headerlink" href="#namelist-datasets-and-scripts" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="namelist">
 <h3><span class="section-number">4.1.1. </span>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h3>
-<p>The case runs are initialized at 12z Oct 19, 2017 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.</p>
+<p>The case runs are initialized at 00z Oct 16, 2017 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.</p>
 <table class="docutils align-center" id="id1">
 <caption><span class="caption-text">Table Namelist options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -183,10 +183,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>RUN_STARTDATE</p></td>
-<td><p>2017-10-19</p></td>
+<td><p>2017-10-16</p></td>
 </tr>
 <tr class="row-odd"><td><p>START_TOD</p></td>
-<td><p>43200</p></td>
+<td><p>0</p></td>
 </tr>
 <tr class="row-even"><td><p>STOP_OPTION</p></td>
 <td><p>168</p></td>
@@ -208,10 +208,7 @@ put in the /run/INPUT directory.</p>
 </div>
 <div class="section" id="scripts">
 <h3><span class="section-number">4.1.3. </span>Scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h3>
-<p>An example Python script is provided below to do the Skew-T Log-P plot based on the observed and simulated sounding profiles. Indices for sounding analysis (e.g. cap strength) are also calculated at the bottom of the plot. This script is adapted from <a class="reference external" href="http://sharp.weather.ou.edu/dev/">SHARPpy</a>.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://domain.invalid/">Download the example script for Skew-T Log-P plot</a></p></li>
-</ul>
+<p>An example Python script is provided below to do the Skew-T Log-P plots for the observed and simulated sounding profiles. Indices for sounding analysis (e.g. cap strength) are also calculated and shown at the bottom of the plot. This script is adapted from <a class="reference external" href="http://sharp.weather.ou.edu/dev/">SHARPpy</a>. Data format needs to comply with <a class="reference external" href="https://sharppy.github.io/SHARPpy/datasource_guide.html">SHARPpy requirements</a>.</p>
 </div>
 </div>
 <div class="section" id="case-results">
@@ -224,8 +221,8 @@ put in the /run/INPUT directory.</p>
 <col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="images/Skew-T1.png"><img alt="logo1" class="align-middle" src="images/Skew-T1.png" style="width: 600px;" /></a></p></td>
-<td><p><a class="reference internal" href="images/Skew-T2.png"><img alt="logo2" class="align-top" src="images/Skew-T2.png" style="width: 600px;" /></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/2017101700_84z_DNR_16betavsObs_indices.png"><img alt="logo1" class="align-middle" src="_images/2017101700_84z_DNR_16betavsObs_indices.png" style="width: 600px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/2017101700_84z_DNR_15p2vsObs_indices.png"><img alt="logo2" class="align-top" src="_images/2017101700_84z_DNR_15p2vsObs_indices.png" style="width: 600px;" /></a></p></td>
 </tr>
 </tbody>
 </table>

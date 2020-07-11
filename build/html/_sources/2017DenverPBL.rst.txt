@@ -16,7 +16,7 @@ Namelist,Datasets and Scripts
 Namelist
 ===================
 
-The case runs are initialized at 12z Oct 19, 2017 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.
+The case runs are initialized at 00z Oct 16, 2017 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.
 
 
 .. table:: Table Namelist options
@@ -25,9 +25,9 @@ The case runs are initialized at 12z Oct 19, 2017 with 168 hours forecasting. Th
  +---------------+-------------+
  | Options       | Value       |
  +===============+=============+
- | RUN_STARTDATE | 2017-10-19  |
+ | RUN_STARTDATE | 2017-10-16  |
  +---------------+-------------+
- | START_TOD     | 43200       |
+ | START_TOD     | 0           |
  +---------------+-------------+
  | STOP_OPTION   | 168         |
  +---------------+-------------+
@@ -49,9 +49,8 @@ Sounding profiles can be downloaded from the `University of Wyoming <http://weat
 Scripts
 ====================================
 
-An example Python script is provided below to do the Skew-T Log-P plot based on the observed and simulated sounding profiles. Indices for sounding analysis (e.g. cap strength) are also calculated at the bottom of the plot. This script is adapted from `SHARPpy <http://sharp.weather.ou.edu/dev/>`_. 
+An example Python script is provided below to do the Skew-T Log-P plots for the observed and simulated sounding profiles. Indices for sounding analysis (e.g. cap strength) are also calculated and shown at the bottom of the plot. This script is adapted from `SHARPpy <http://sharp.weather.ou.edu/dev/>`_. Data format needs to comply with `SHARPpy requirements <https://sharppy.github.io/SHARPpy/datasource_guide.html>`_. 
 
-* `Download the example script for Skew-T Log-P plot <https://domain.invalid/>`_ 
 
 ..............
 Case Results
@@ -61,12 +60,12 @@ Case Results
 Skew-T Log-P Plot
 ======================================================
 
-.. |logo1| image:: images/Skew-T1.png   
+.. |logo1| image:: images/2017101700_84z_DNR_16betavsObs_indices.png   
    :width: 600
    :align: middle
 
 
-.. |logo2| image:: images/Skew-T2.png
+.. |logo2| image:: images/2017101700_84z_DNR_15p2vsObs_indices.png
    :width: 600
    :align: top
 
