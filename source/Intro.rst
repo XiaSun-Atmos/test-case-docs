@@ -17,10 +17,10 @@ The goal of this ongoing effort is to provide the community with a model testing
 
 The below case catalogue is created based on the known biases of the UFS WM. This is a list that we are updating diligently. Please come back to check updates anytime.
 
-* 2019 Hurricane Barry
-* 2019 Halloween Storm
-* 2017 Denver Inversion
-* Cold Bias
+* :ref:`2019 Hurricane Barry <2019 Hurricane Barry>`
+* :ref:`2019 Halloween Storm <2019 Halloween Storm>`
+* :ref:`2017 Denver Inversion <2017 Denver Inversion>`
+* :ref:`2020 Janurary Cold Bias <2020 Janurary Cold Bias>`
 
 .. note:: Case catalogue updated on July 9, 2020.
 

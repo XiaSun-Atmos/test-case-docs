@@ -16,7 +16,7 @@ The case runs are initialized at 00z Oct 16, 2017 with 168 hours forecasting. Th
 
 .. code-block:: bash
  
-   ./xmlchange RUN_STARTDATE=20171016,START_TOD=0,STOP_OPTION=nhours,STOP_N=168
+   ./xmlchange RUN_STARTDATE=2017-10-16,START_TOD=0,STOP_OPTION=nhours,STOP_N=168
 
 
 Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. These files should be 
