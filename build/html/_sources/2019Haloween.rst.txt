@@ -20,7 +20,7 @@ The case runs are initialized at 12z Oct 25, 2019 with 168 hours forecasting. Th
  
    ./xmlchange RUN_STARTDATE=20191025,START_TOD=43200,STOP_OPTION=nhours,STOP_N=168
 
-.. warning:: The model run time step is reduced from the default 225s to 150s (dt_atmos=150) in this case due to the model instability in GFSv16beta.
+.. warning:: The model run time step is reduced from the default 225s to 150s (dt_atmos=150) in this case due to the model instability in GFSv16beta. To set the time step, add ``dt_atmos=150`` to ``user_nl_ufsatm``
 
 Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The `GFS reanalysis dataset <https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs>`_ are used as 'truth' to compare with simulation results.
 
