@@ -19,12 +19,9 @@ The case runs are initialized at 12z Jan 17, 2020 with 168 hours forecasting. Th
    ./xmlchange RUN_STARTDATE=2020-01-17,START_TOD=43200,STOP_OPTION=nhours,STOP_N=168
 
 
-Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. These files should be 
-put in the /run/INPUT directory.
+Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The `GFS reanalysis dataset <https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs>`_ are used as 'truth' to compare with simulation results.
 
 :download:`Initial condition files <https://domain.invalid/>`
-
-The `GFS reanalysis dataset <https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs>`_ are used as 'truth' to compare with simulation results.
 
 ..............
 Case Results

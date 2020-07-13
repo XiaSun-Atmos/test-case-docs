@@ -22,12 +22,9 @@ The case runs are initialized at 12z Oct 25, 2019 with 168 hours forecasting. Th
 
 .. warning:: The model run time step is reduced from the default 225s to 150s (dt_atmos=150) in this case due to the model instability in GFSv16beta.
 
-Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. 
+Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The `GFS reanalysis dataset <https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs>`_ are used as 'truth' to compare with simulation results.
 
 :download:`Initial condition files <https://domain.invalid/>`
-
-The `GFS reanalysis dataset <https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs>`_ are used as 'truth' to compare with simulation results.
-
 
 ..............
 Case Results

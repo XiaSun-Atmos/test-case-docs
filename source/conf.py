@@ -51,6 +51,7 @@ exclude_patterns = []
 import sphinx_rtd_theme
 master_doc = 'index'
 extensions = [
+    'sphinx_copybutton',
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
@@ -61,6 +62,11 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx.ext.napoleon',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.autodoc',
+#    'sphinx_gallery.gen_gallery',
+    'sphinx-prompt',
 ]
 #extensions = ['sphinx.ext.autosectionlabel',]
 

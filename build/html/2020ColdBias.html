@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
 
   
   
@@ -30,6 +31,8 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -167,10 +170,8 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmlchange <span class="nv">RUN_STARTDATE</span><span class="o">=</span><span class="m">2020</span>-01-17,START_TOD<span class="o">=</span><span class="m">43200</span>,STOP_OPTION<span class="o">=</span>nhours,STOP_N<span class="o">=</span><span class="m">168</span>
 </pre></div>
 </div>
-<p>Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. These files should be
-put in the /run/INPUT directory.</p>
+<p>Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The <a class="reference external" href="https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs">GFS reanalysis dataset</a> are used as ‘truth’ to compare with simulation results.</p>
 <p><a class="reference download external" download="" href="https://domain.invalid/"><code class="xref download docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">condition</span> <span class="pre">files</span></code></a></p>
-<p>The <a class="reference external" href="https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs">GFS reanalysis dataset</a> are used as ‘truth’ to compare with simulation results.</p>
 </div>
 <div class="section" id="case-results">
 <h2><span class="section-number">5.2. </span>Case Results<a class="headerlink" href="#case-results" title="Permalink to this headline">¶</a></h2>

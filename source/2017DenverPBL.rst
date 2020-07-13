@@ -19,12 +19,9 @@ The case runs are initialized at 00z Oct 16, 2017 with 168 hours forecasting. Th
    ./xmlchange RUN_STARTDATE=2017-10-16,START_TOD=0,STOP_OPTION=nhours,STOP_N=168
 
 
-Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. These files should be 
-put in the /run/INPUT directory.
+Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. Sounding profiles can be downloaded from the `University of Wyoming <http://weather.uwyo.edu/upperair/sounding.html>`_.
 
 :download:`Initial condition files <https://domain.invalid/>`
-
-Sounding profiles can be downloaded from the `University of Wyoming <http://weather.uwyo.edu/upperair/sounding.html>`_.
 
 ..............
 Case Results

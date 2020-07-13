@@ -5,7 +5,32 @@
 
 Welcome to the Test Cases Page for the UFS weather model
 =======================================================
+.. |logo1| image:: images/tracker_Barry_ufsv1.png  
+   :width: 300
+   :align: middle
 
+
+.. |logo2| image:: images/Diff_FV3_T2_20200121_1200_GFSv16beta.png
+   :width: 300
+   :align: top
+
+.. |logo3| image:: images/2017101700_84z_DNR_16betavsObs_indices-1.png 
+   :width: 300
+   :align: top
+
++---------+---------+---------+
+| |logo1| | |logo2| | |logo3| |
++---------+---------+---------+
+
+:Release: ufs-v1.0.0
+:Compsets: GFSv16beta, GFSv15p2
+:Date: |today|  
+:Case Catalogue:
+ * :ref:`2019 Hurricane Barry <2019 Hurricane Barry>`
+ * :ref:`2019 Halloween Storm <2019 Halloween Storm>`
+ * :ref:`2017 Denver Inversion <2017 Denver Inversion>`
+ * :ref:`2020 Janurary Cold Bias <2020 Janurary Cold Bias>`
+   
 This documentation provides resources for representative case studies in the Unified Forecast System Weather model.
 
 ..............................

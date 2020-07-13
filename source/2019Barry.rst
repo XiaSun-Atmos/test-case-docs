@@ -22,11 +22,9 @@ The case runs are initialized at 00z Jul 11, 2019 with 168 hours forecasting. Th
  
    ./xmlchange RUN_STARTDATE=2019-07-01,START_TOD=0,STOP_OPTION=nhours,STOP_N=168
 
-Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. 
+Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The Stand-alone Geophysical Fluid Dynamics Laboratory(GFDL) Vortex Tracker is a tool to estimate hurricane tracks and intensities. The `BestTrack dataset <https://domain.invalid/>`_ provides the ‘truth’ data for hurricane evolution.
 
 :download:`Initial condition files <https://domain.invalid/>`
-
-The Stand-alone Geophysical Fluid Dynamics Laboratory(GFDL) Vortex Tracker is a tool to estimate hurricane tracks and intensities. The `BestTrack dataset <https://domain.invalid/>`_ provides the ‘truth’ data for hurricane evolution.
 
 ..............
 Case Results
