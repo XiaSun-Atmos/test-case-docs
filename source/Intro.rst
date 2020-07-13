@@ -22,6 +22,10 @@ The below case catalogue is created based on the known biases of the UFS WM. Thi
 * :ref:`2017 Denver Inversion <2017 Denver Inversion>`
 * :ref:`2020 Janurary Cold Bias <2020 Janurary Cold Bias>`
 
-.. note:: Case catalogue updated on July 9, 2020.
+Release
+    ufs-v1.0.0
+Date
+    |today|  
+
 
 

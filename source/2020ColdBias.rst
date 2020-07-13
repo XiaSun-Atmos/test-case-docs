@@ -12,7 +12,7 @@
 Model Configuration and Datasets
 ..............................
 
-The case runs are initialized at 12z Jan 17, 2020 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below. The app uses ``./xmlchange`` to change the runtime settings. The settings needs to be modified to set up the start date, start time, and run time are listed below.
+The case runs are initialized at 12z Jan 17, 2020 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below. The app uses ``./xmlchange`` to change the runtime settings. The settings that need to be modified to set up the start date, start time, and run time are listed below.
 
 .. code-block:: bash
  

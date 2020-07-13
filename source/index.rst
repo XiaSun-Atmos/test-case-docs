@@ -6,6 +6,20 @@
 Welcome to the Test Cases Page for the UFS weather model
 =======================================================
 
+This documentation provides resources for representative case studies in the Unified Forecast System Weather model.
+
+..............................
+Noteable Links
+..............................
+
+* `Developmental Testbed Center <https://www.dtcenter.org/>`_
+* `Unified Forecast System (UFS) <https://ufscommunity.org/>`_
+* `The UFS Medium-Range Weather App Users Guide <https://ufs-mrweather-app.readthedocs.io/en/latest/index.html>`_
+
+..............................
+Contents
+..............................
+
 .. toctree::
    :numbered:
    :maxdepth: 3
