@@ -85,12 +85,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">1. Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. 2019 Hurricane Barry</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#namelist-datasets-and-scripts">2.1. Namelist, Datasets and Scripts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#namelist">2.1.1. Namelist</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#datasets">2.1.2. Datasets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#scripts">2.1.3. Scripts</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#model-configuration-and-datasets">2.1. Model Configuration and Datasets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#case-results">2.2. Case Results</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#hurricane-track-and-intensity">2.2.1. Hurricane Track and Intensity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#time-series-of-max-ws-and-min-mslp">2.2.2. Time Series of Max. WS and Min. MSLP</a></li>
@@ -170,69 +165,29 @@
   <div class="section" id="hurricane-barry">
 <h1><span class="section-number">2. </span>2019 Hurricane Barry<a class="headerlink" href="#hurricane-barry" title="Permalink to this headline">¶</a></h1>
 <p>Hurricane Barry made landfall in Louisiana on July 11, 2019. The peak wind speed and minimum pressure reached 72 mph and 992 hPa, respectively during the storm.</p>
-<div class="section" id="namelist-datasets-and-scripts">
-<h2><span class="section-number">2.1. </span>Namelist, Datasets and Scripts<a class="headerlink" href="#namelist-datasets-and-scripts" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="namelist">
-<h3><span class="section-number">2.1.1. </span>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h3>
-<p>The UFS Medium-Range (MR) Weather Application (App) is used to prepare initial conditions, compile and run the UFS model, and post process the raw model outputs. Two model configuration compsets (GFSv15p2 and GFSv16beta) are tested using the C768 (~13km) spatial resolution with 64 vertical levels (default).</p>
-<p>The case runs are initialized at 00z Jul 11, 2019 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.</p>
-<table class="docutils align-center" id="id1">
-<caption><span class="caption-text">Table  Namelist options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 54%" />
-<col style="width: 46%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Options</p></th>
-<th class="head"><p>Value</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>RUN_STARTDATE</p></td>
-<td><p>2019-07-11</p></td>
-</tr>
-<tr class="row-odd"><td><p>START_TOD</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-even"><td><p>STOP_OPTION</p></td>
-<td><p>168</p></td>
-</tr>
-<tr class="row-odd"><td><p>STOP_N.</p></td>
-<td><p>nhours</p></td>
-</tr>
-</tbody>
-</table>
+<div class="section" id="model-configuration-and-datasets">
+<h2><span class="section-number">2.1. </span>Model Configuration and Datasets<a class="headerlink" href="#model-configuration-and-datasets" title="Permalink to this headline">¶</a></h2>
+<p>The UFS Medium-Range (MR) Weather Application (App) is used to prepare initial conditions, compile and run the UFS model, and post process the raw model outputs. Two model configuration compsets (<code class="docutils literal notranslate"><span class="pre">GFSv15p2</span></code> and <code class="docutils literal notranslate"><span class="pre">GFSv16beta</span></code>) are tested using the <em>C768</em> (~13km) spatial resolution with 64 vertical levels (default).</p>
+<p>The case runs are initialized at 00z Jul 11, 2019 with 168 hours forecasting. The app uses <code class="docutils literal notranslate"><span class="pre">./xmlchange</span></code> to change the runtime settings. The settings needs to be modified to set up the start date, start time, and run time are listed below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmlchange <span class="nv">RUN_STARTDATE</span><span class="o">=</span><span class="m">20190701</span>,START_TOD<span class="o">=</span><span class="m">0</span>,STOP_OPTION<span class="o">=</span>nhours,STOP_N<span class="o">=</span><span class="m">168</span>
+</pre></div>
 </div>
-<div class="section" id="datasets">
-<h3><span class="section-number">2.1.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h3>
 <p>Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. These files should be put in the /run/INPUT directory.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://domain.invalid/">Download the 2019 July Hurricane Barry case initial condition files</a></p></li>
-</ul>
-<p>The Stand-alone Geophysical Fluid Dynamics Laboratory(GFDL) Vortex Tracker is a tool to estimate hurricane tracks and intensities. The BestTrack dataset provides the ‘truth’ data for hurricane evolution.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://domain.invalid/">Download the 2019 July Hurricane Barry Best Track data</a></p></li>
-</ul>
-</div>
-<div class="section" id="scripts">
-<h3><span class="section-number">2.1.3. </span>Scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h3>
-<p>Below are example post-processing scripts used to do the plots.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://domain.invalid/">Download the example script for hurricane tracks and intensities</a></p></li>
-<li><p><a class="reference external" href="https://domain.invalid/">Download the example script for time series of maximum wind speed and minimum sea level pressure</a></p></li>
-</ul>
-</div>
+<p><a class="reference download external" download="" href="https://domain.invalid/"><code class="xref download docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">condition</span> <span class="pre">files</span></code></a></p>
+<p>The Stand-alone Geophysical Fluid Dynamics Laboratory(GFDL) Vortex Tracker is a tool to estimate hurricane tracks and intensities. The <a class="reference external" href="https://domain.invalid/">BestTrack dataset</a> provides the ‘truth’ data for hurricane evolution.</p>
 </div>
 <div class="section" id="case-results">
 <h2><span class="section-number">2.2. </span>Case Results<a class="headerlink" href="#case-results" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="hurricane-track-and-intensity">
 <h3><span class="section-number">2.2.1. </span>Hurricane Track and Intensity<a class="headerlink" href="#hurricane-track-and-intensity" title="Permalink to this headline">¶</a></h3>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <div class="figure align-center">
 <a class="reference internal image-reference" href="_images/tracker_Barry_ufsv1.png"><img alt="_images/tracker_Barry_ufsv1.png" src="_images/tracker_Barry_ufsv1.png" style="width: 500px;" /></a>
 </div>
 </div>
 <div class="section" id="time-series-of-max-ws-and-min-mslp">
 <h3><span class="section-number">2.2.2. </span>Time Series of Max. WS and Min. MSLP<a class="headerlink" href="#time-series-of-max-ws-and-min-mslp" title="Permalink to this headline">¶</a></h3>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -247,6 +202,7 @@
 </div>
 <div class="section" id="comparison-with-satellite-image-f072">
 <h3><span class="section-number">2.2.3. </span>Comparison with Satellite Image (f072)<a class="headerlink" href="#comparison-with-satellite-image-f072" title="Permalink to this headline">¶</a></h3>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -264,6 +220,7 @@
 </div>
 <div class="section" id="hovmoller-diagram-of-850-hpa-ws-after-landfall">
 <h3><span class="section-number">2.2.4. </span>Hovmöller diagram of 850 hPa WS after Landfall<a class="headerlink" href="#hovmoller-diagram-of-850-hpa-ws-after-landfall" title="Permalink to this headline">¶</a></h3>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />

@@ -86,12 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="2019Barry.html">2. 2019 Hurricane Barry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2019Haloween.html">3. 2019 Halloween Storm</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. 2017 Denver Inversion</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#namelist-datasets-and-scripts">4.1. Namelist,Datasets and Scripts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#namelist">4.1.1. Namelist</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#datasets">4.1.2. Datasets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#scripts">4.1.3. Scripts</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#model-configuration-and-datasets">4.1. Model Configuration and Datasets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#case-results">4.2. Case Results</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#skew-t-log-p-plot">4.2.1. Skew-T Log-P Plot</a></li>
 </ul>
@@ -165,59 +160,22 @@
             
   <div class="section" id="denver-inversion">
 <h1><span class="section-number">4. </span>2017 Denver Inversion<a class="headerlink" href="#denver-inversion" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="namelist-datasets-and-scripts">
-<h2><span class="section-number">4.1. </span>Namelist,Datasets and Scripts<a class="headerlink" href="#namelist-datasets-and-scripts" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="namelist">
-<h3><span class="section-number">4.1.1. </span>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h3>
-<p>The case runs are initialized at 00z Oct 16, 2017 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.</p>
-<table class="docutils align-center" id="id1">
-<caption><span class="caption-text">Table Namelist options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 54%" />
-<col style="width: 46%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Options</p></th>
-<th class="head"><p>Value</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>RUN_STARTDATE</p></td>
-<td><p>2017-10-16</p></td>
-</tr>
-<tr class="row-odd"><td><p>START_TOD</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-even"><td><p>STOP_OPTION</p></td>
-<td><p>168</p></td>
-</tr>
-<tr class="row-odd"><td><p>STOP_N.</p></td>
-<td><p>nhours</p></td>
-</tr>
-</tbody>
-</table>
+<div class="section" id="model-configuration-and-datasets">
+<h2><span class="section-number">4.1. </span>Model Configuration and Datasets<a class="headerlink" href="#model-configuration-and-datasets" title="Permalink to this headline">¶</a></h2>
+<p>The case runs are initialized at 00z Oct 16, 2017 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below. The app uses <code class="docutils literal notranslate"><span class="pre">./xmlchange</span></code> to change the runtime settings. The settings needs to be modified to set up the start date, start time, and run time are listed below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmlchange <span class="nv">RUN_STARTDATE</span><span class="o">=</span><span class="m">20171016</span>,START_TOD<span class="o">=</span><span class="m">0</span>,STOP_OPTION<span class="o">=</span>nhours,STOP_N<span class="o">=</span><span class="m">168</span>
+</pre></div>
 </div>
-<div class="section" id="datasets">
-<h3><span class="section-number">4.1.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h3>
 <p>Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. These files should be
 put in the /run/INPUT directory.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://domain.invalid/">Download the 2019 Denver Inversion case initial condition files</a></p></li>
-</ul>
+<p><a class="reference download external" download="" href="https://domain.invalid/"><code class="xref download docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">condition</span> <span class="pre">files</span></code></a></p>
 <p>Sounding profiles can be downloaded from the <a class="reference external" href="http://weather.uwyo.edu/upperair/sounding.html">University of Wyoming</a>.</p>
-</div>
-<div class="section" id="scripts">
-<h3><span class="section-number">4.1.3. </span>Scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h3>
-<p>An example Python script is provided below to do the Skew-T Log-P plots for the observed and simulated sounding profiles. Indices for sounding analysis (e.g. lapse rate) are also calculated and shown at the bottom of the plot. This script is adapted from <a class="reference external" href="http://sharp.weather.ou.edu/dev/">SHARPpy</a>. Data format needs to comply with <a class="reference external" href="https://sharppy.github.io/SHARPpy/datasource_guide.html">SHARPpy requirements</a>.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://domain.invalid/">Download the example script for Skew-T Log-P plot</a></p></li>
-</ul>
-</div>
 </div>
 <div class="section" id="case-results">
 <h2><span class="section-number">4.2. </span>Case Results<a class="headerlink" href="#case-results" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="skew-t-log-p-plot">
 <h3><span class="section-number">4.2.1. </span>Skew-T Log-P Plot<a class="headerlink" href="#skew-t-log-p-plot" title="Permalink to this headline">¶</a></h3>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />

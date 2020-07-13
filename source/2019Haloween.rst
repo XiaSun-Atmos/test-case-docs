@@ -11,50 +11,23 @@
 The 2019 Halloween storm stroke the eastern U.S. cities with wind gusts, thunderstorms, and flash flooding. 
 
 ..............................
-Namelist, Datasets and Scripts
+Model Configuration and Datasets
 ..............................
-===================
-Namelist
-===================
 
-The case runs are initialized at 12z Oct 25, 2019 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.
+The case runs are initialized at 12z Oct 25, 2019 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below. The app uses ``./xmlchange`` to change the runtime settings. The settings needs to be modified to set up the start date, start time, and run time are listed below.
 
+.. code-block:: bash
+ 
+   ./xmlchange RUN_STARTDATE=20191025,START_TOD=43200,STOP_OPTION=nhours,STOP_N=168
 
-.. table:: Table Namelist options
- :align: center
+.. warning:: Time step is reduced from the defalut 225s to 150s (dt_atmos=150) in this case due to the model instability in GFSv16beta.
 
- +---------------+-------------+
- | Options       | Value       |
- +===============+=============+
- | RUN_STARTDATE | 2019-10-25  |
- +---------------+-------------+
- | START_TOD     | 43200       |
- +---------------+-------------+
- | STOP_OPTION   | 168         |
- +---------------+-------------+
- | STOP_N.       | nhours      |
- +---------------+-------------+
+Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. 
 
-====================================
-Datasets
-====================================
-Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. These files should be put in the /run/INPUT directory.
+:download:`Initial condition files <https://domain.invalid/>`
 
-* `Download the 2019 Halloween Storm case initial condition files <https://domain.invalid/>`_
+The `GFS reanalysis dataset <https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs>`_ are used as 'truth' to compare with simulation results.
 
-
-Reanalysis dataset are used as 'truth' to compare with simulation results.
-
-* `Dowload the GFS Reanalysis datasets <https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs>`_ 
-* `Dowload the NAM Reanalysis datasets <https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/north-american-mesoscale-forecast-system-nam/>`_ 
-
-====================================
-Scripts
-====================================
-Below are example post-processing scripts used to do the plots.
-
-* `Dowload the example script for 500mb geopotential heigth and absolute voticity map <https://domain.invalid/>`_ 
-* `Dowload the example script for composite reflectivity, surface gust, and 2-m temperature  <https://domain.invalid/>`_ 
 
 ..............
 Case Results
@@ -63,6 +36,7 @@ Case Results
 ======================================================
 500mb Geopotentail Height and Aboslute Vorticity Map
 ======================================================
+:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. |logo1| image:: images/500mb_2019110100_16beta_150s.png   
    :width: 600
@@ -86,6 +60,7 @@ Case Results
 ====================================
 Composite Reflectivity
 ====================================
+:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. |logo4| image:: images/GFS16beta_f156_REFC_entireatmosphere.png  
    :width: 600
@@ -108,6 +83,7 @@ Composite Reflectivity
 ====================================
 Surface Gust
 ====================================
+:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. |logo7| image:: images/GFS16beta_f156_GUST_surface.png  
    :width: 600
@@ -131,6 +107,7 @@ Surface Gust
 ====================================
 2-m Temperature
 ====================================
+:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. |logo10| image:: images/GFS16beta_f156_TMP_2maboveground.png  
    :width: 600

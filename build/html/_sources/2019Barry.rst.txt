@@ -10,51 +10,23 @@
 
 Hurricane Barry made landfall in Louisiana on July 11, 2019. The peak wind speed and minimum pressure reached 72 mph and 992 hPa, respectively during the storm. 
 
-...........
-Namelist, Datasets and Scripts
-...........
-===================
-Namelist
-===================
-The UFS Medium-Range (MR) Weather Application (App) is used to prepare initial conditions, compile and run the UFS model, and post process the raw model outputs. Two model configuration compsets (GFSv15p2 and GFSv16beta) are tested using the C768 (~13km) spatial resolution with 64 vertical levels (default).
+................................
+Model Configuration and Datasets
+................................
 
-The case runs are initialized at 00z Jul 11, 2019 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.
+The UFS Medium-Range (MR) Weather Application (App) is used to prepare initial conditions, compile and run the UFS model, and post process the raw model outputs. Two model configuration compsets (``GFSv15p2`` and ``GFSv16beta``) are tested using the :emphasis:`C768` (~13km) spatial resolution with 64 vertical levels (default).
 
+The case runs are initialized at 00z Jul 11, 2019 with 168 hours forecasting. The app uses ``./xmlchange`` to change the runtime settings. The settings needs to be modified to set up the start date, start time, and run time are listed below.
 
-.. table:: Table  Namelist options
- :align: center
+.. code-block:: bash
+ 
+   ./xmlchange RUN_STARTDATE=20190701,START_TOD=0,STOP_OPTION=nhours,STOP_N=168
 
- +---------------+-------------+
- | Options       | Value       |
- +===============+=============+
- | RUN_STARTDATE | 2019-07-11  |
- +---------------+-------------+
- | START_TOD     | 0           |
- +---------------+-------------+
- | STOP_OPTION   | 168         |
- +---------------+-------------+
- | STOP_N.       | nhours      |
- +---------------+-------------+
-
-====================================
-Datasets
-====================================
 Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. These files should be put in the /run/INPUT directory.
 
-* `Download the 2019 July Hurricane Barry case initial condition files <https://domain.invalid/>`_
+:download:`Initial condition files <https://domain.invalid/>`
 
-
-The Stand-alone Geophysical Fluid Dynamics Laboratory(GFDL) Vortex Tracker is a tool to estimate hurricane tracks and intensities. The BestTrack dataset provides the ‘truth’ data for hurricane evolution.
-
-* `Download the 2019 July Hurricane Barry Best Track data <https://domain.invalid/>`_ 
-
-====================================
-Scripts
-====================================
-Below are example post-processing scripts used to do the plots.
-
-* `Download the example script for hurricane tracks and intensities <https://domain.invalid/>`_ 
-* `Download the example script for time series of maximum wind speed and minimum sea level pressure  <https://domain.invalid/>`_ 
+The Stand-alone Geophysical Fluid Dynamics Laboratory(GFDL) Vortex Tracker is a tool to estimate hurricane tracks and intensities. The `BestTrack dataset <https://domain.invalid/>`_ provides the ‘truth’ data for hurricane evolution.
 
 ..............
 Case Results
@@ -63,6 +35,7 @@ Case Results
 ==============================
 Hurricane Track and Intensity
 ==============================
+:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. figure:: images/tracker_Barry_ufsv1.png
   :width: 500
@@ -71,7 +44,7 @@ Hurricane Track and Intensity
 ====================================
 Time Series of Max. WS and Min. MSLP
 ====================================
-
+:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. |logo1| image:: images/tracker_ws_Barry_ufsv1.png   
    :width: 600
@@ -89,6 +62,7 @@ Time Series of Max. WS and Min. MSLP
 ====================================
 Comparison with Satellite Image (f072)
 ====================================
+:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. |logo3| image:: images/FV3_OLR_00zJul11_12zJul14_GFS_f72_v16beta.png  
    :width: 600
@@ -112,6 +86,7 @@ Comparison with Satellite Image (f072)
 =============================================
 Hovmöller diagram of 850 hPa WS after Landfall
 =============================================
+:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. |logo6| image:: images/Ufs_GFS_v16beta_cross_WS_radial_timeseries.png  
    :width: 600

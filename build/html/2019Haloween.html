@@ -86,12 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2019Barry.html">2. 2019 Hurricane Barry</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. 2019 Halloween Storm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#namelist-datasets-and-scripts">3.1. Namelist, Datasets and Scripts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#namelist">3.1.1. Namelist</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#datasets">3.1.2. Datasets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#scripts">3.1.3. Scripts</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#model-configuration-and-datasets">3.1. Model Configuration and Datasets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#case-results">3.2. Case Results</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#mb-geopotentail-height-and-aboslute-vorticity-map">3.2.1. 500mb Geopotentail Height and Aboslute Vorticity Map</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#composite-reflectivity">3.2.2. Composite Reflectivity</a></li>
@@ -170,63 +165,25 @@
   <div class="section" id="halloween-storm">
 <h1><span class="section-number">3. </span>2019 Halloween Storm<a class="headerlink" href="#halloween-storm" title="Permalink to this headline">¶</a></h1>
 <p>The 2019 Halloween storm stroke the eastern U.S. cities with wind gusts, thunderstorms, and flash flooding.</p>
-<div class="section" id="namelist-datasets-and-scripts">
-<h2><span class="section-number">3.1. </span>Namelist, Datasets and Scripts<a class="headerlink" href="#namelist-datasets-and-scripts" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="namelist">
-<h3><span class="section-number">3.1.1. </span>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h3>
-<p>The case runs are initialized at 12z Oct 25, 2019 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below.</p>
-<table class="docutils align-center" id="id1">
-<caption><span class="caption-text">Table Namelist options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 54%" />
-<col style="width: 46%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Options</p></th>
-<th class="head"><p>Value</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>RUN_STARTDATE</p></td>
-<td><p>2019-10-25</p></td>
-</tr>
-<tr class="row-odd"><td><p>START_TOD</p></td>
-<td><p>43200</p></td>
-</tr>
-<tr class="row-even"><td><p>STOP_OPTION</p></td>
-<td><p>168</p></td>
-</tr>
-<tr class="row-odd"><td><p>STOP_N.</p></td>
-<td><p>nhours</p></td>
-</tr>
-</tbody>
-</table>
+<div class="section" id="model-configuration-and-datasets">
+<h2><span class="section-number">3.1. </span>Model Configuration and Datasets<a class="headerlink" href="#model-configuration-and-datasets" title="Permalink to this headline">¶</a></h2>
+<p>The case runs are initialized at 12z Oct 25, 2019 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below. The app uses <code class="docutils literal notranslate"><span class="pre">./xmlchange</span></code> to change the runtime settings. The settings needs to be modified to set up the start date, start time, and run time are listed below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmlchange <span class="nv">RUN_STARTDATE</span><span class="o">=</span><span class="m">20191025</span>,START_TOD<span class="o">=</span><span class="m">43200</span>,STOP_OPTION<span class="o">=</span>nhours,STOP_N<span class="o">=</span><span class="m">168</span>
+</pre></div>
 </div>
-<div class="section" id="datasets">
-<h3><span class="section-number">3.1.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h3>
-<p>Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. These files should be put in the /run/INPUT directory.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://domain.invalid/">Download the 2019 Halloween Storm case initial condition files</a></p></li>
-</ul>
-<p>Reanalysis dataset are used as ‘truth’ to compare with simulation results.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs">Dowload the GFS Reanalysis datasets</a></p></li>
-<li><p><a class="reference external" href="https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/north-american-mesoscale-forecast-system-nam/">Dowload the NAM Reanalysis datasets</a></p></li>
-</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Time step is reduced from the defalut 225s to 150s (dt_atmos=150) in this case due to the model instability in GFSv16beta.</p>
 </div>
-<div class="section" id="scripts">
-<h3><span class="section-number">3.1.3. </span>Scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h3>
-<p>Below are example post-processing scripts used to do the plots.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://domain.invalid/">Dowload the example script for 500mb geopotential heigth and absolute voticity map</a></p></li>
-<li><p><a class="reference external" href="https://domain.invalid/">Dowload the example script for composite reflectivity, surface gust, and 2-m temperature</a></p></li>
-</ul>
-</div>
+<p>Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format.</p>
+<p><a class="reference download external" download="" href="https://domain.invalid/"><code class="xref download docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">condition</span> <span class="pre">files</span></code></a></p>
+<p>The <a class="reference external" href="https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs">GFS reanalysis dataset</a> are used as ‘truth’ to compare with simulation results.</p>
 </div>
 <div class="section" id="case-results">
 <h2><span class="section-number">3.2. </span>Case Results<a class="headerlink" href="#case-results" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="mb-geopotentail-height-and-aboslute-vorticity-map">
 <h3><span class="section-number">3.2.1. </span>500mb Geopotentail Height and Aboslute Vorticity Map<a class="headerlink" href="#mb-geopotentail-height-and-aboslute-vorticity-map" title="Permalink to this headline">¶</a></h3>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -244,6 +201,7 @@
 </div>
 <div class="section" id="composite-reflectivity">
 <h3><span class="section-number">3.2.2. </span>Composite Reflectivity<a class="headerlink" href="#composite-reflectivity" title="Permalink to this headline">¶</a></h3>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -261,6 +219,7 @@
 </div>
 <div class="section" id="surface-gust">
 <h3><span class="section-number">3.2.3. </span>Surface Gust<a class="headerlink" href="#surface-gust" title="Permalink to this headline">¶</a></h3>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -278,6 +237,7 @@
 </div>
 <div class="section" id="m-temperature">
 <h3><span class="section-number">3.2.4. </span>2-m Temperature<a class="headerlink" href="#m-temperature" title="Permalink to this headline">¶</a></h3>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
