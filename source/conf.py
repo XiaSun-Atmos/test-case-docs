@@ -66,7 +66,7 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.autodoc',
 #    'sphinx_gallery.gen_gallery',
-    'sphinx-prompt',
+#    'sphinx-prompt',
 ]
 #extensions = ['sphinx.ext.autosectionlabel',]
 
