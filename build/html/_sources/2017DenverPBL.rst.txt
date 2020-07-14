@@ -33,15 +33,8 @@ Skew-T Log-P Plot
 
 :download:`Source script <../script/hurrican_track_intensity.py>`
 
-.. |logo1| image:: images/2017101700_84z_DNR_16betavsObs_indices-1.png   
-   :width: 600
-   :align: middle
+.. figure:: images/2017101700_84z_DNR_GFS_Obs_indices.png
+  :width: 1200
+  :align: center
 
-
-.. |logo2| image:: images/2017101700_84z_DNR_15p2vsObs_indices-1.png
-   :width: 600
-   :align: top
-
-+---------+---------+
-| |logo1| | |logo2| |
-+---------+---------+
+  Skew-T Log-P plot from observed and simulated sounding profiles

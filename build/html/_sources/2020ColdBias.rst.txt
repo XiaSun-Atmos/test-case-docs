@@ -32,25 +32,8 @@ Case Results
 ======================================================
 :download:`Source script <../script/hurrican_track_intensity.py>`
 
-.. |logo1| image:: images/FV3_T2_20200121_1200_GFSv16beta.png   
-   :width: 600
-   :align: middle
+.. figure:: images/FV3_T2_20200121_1200_GFS.png
+  :width: 1200
+  :align: center
 
-
-.. |logo2| image:: images/FV3_T2_20200121_1200.png
-   :width: 600
-   :align: top
-
-.. |logo3| image:: images/GFSANL_T2_20200121_1200.png
-   :width: 600
-   :align: top
-
-.. |logo4| image:: images/Diff_FV3_T2_20200121_1200_GFSv16beta.png
-   :width: 600
-   :align: top
-
-+---------+---------+
-| |logo1| | |logo2| |
-+---------+---------+
-| |logo3| | |logo4| |
-+---------+---------+
+  2-m temperature (K) from GFSv16beta (upper left), GFSv15p2 (upper right), GFS_ANL (lower left), and difference between GFSv16beta and GFS_ANL (lower right)
