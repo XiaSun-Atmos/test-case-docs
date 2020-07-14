@@ -89,9 +89,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#model-configuration-and-datasets">2.1. Model Configuration and Datasets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#case-results">2.2. Case Results</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#hurricane-track-and-intensity">2.2.1. Hurricane Track and Intensity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#time-series-of-max-ws-and-min-mslp">2.2.2. Time Series of Max. WS and Min. MSLP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#comparison-with-satellite-image-f072">2.2.3. Comparison with Satellite Image (f072)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#hovmoller-diagram-of-850-hpa-ws-after-landfall">2.2.4. Hovmöller diagram of 850 hPa WS after Landfall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comparison-with-satellite-image-f072">2.2.2. Comparison with Satellite Image (f072)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hovmoller-diagram-of-850-hpa-ws-after-landfall">2.2.3. Hovmöller diagram of 850 hPa WS after Landfall</a></li>
 </ul>
 </li>
 </ul>
@@ -164,7 +163,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="hurricane-barry">
+  <style> .red {color:red}
+.green{color:green}
+.cyan{color:#00D7D7}
+.purple{color:purple}
+.blue{color:blue}
+.yellow{color:#CDCD00}
+
+</style><div class="section" id="hurricane-barry">
 <h1><span class="section-number">2. </span>2019 Hurricane Barry<a class="headerlink" href="#hurricane-barry" title="Permalink to this headline">¶</a></h1>
 <p>Hurricane Barry made landfall in Louisiana on July 11, 2019. The peak wind speed and minimum pressure reached 72 mph and 992 hPa, respectively during the storm.</p>
 <div class="section" id="model-configuration-and-datasets">
@@ -182,60 +188,44 @@
 <div class="section" id="hurricane-track-and-intensity">
 <h3><span class="section-number">2.2.1. </span>Hurricane Track and Intensity<a class="headerlink" href="#hurricane-track-and-intensity" title="Permalink to this headline">¶</a></h3>
 <p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="_images/tracker_Barry_ufsv1.png"><img alt="_images/tracker_Barry_ufsv1.png" src="_images/tracker_Barry_ufsv1.png" style="width: 500px;" /></a>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/tracker_Barry_ufsv1.png"><img alt="_images/tracker_Barry_ufsv1.png" src="_images/tracker_Barry_ufsv1.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Hurricane tracks from GFSv16beta (red dashline), GFSv15p2 (blue dash line), and BestTrack (black dash line). The dots are color coded with the vortex maximum 10-m wind speed (WS, kt).</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="section" id="time-series-of-max-ws-and-min-mslp">
-<h3><span class="section-number">2.2.2. </span>Time Series of Max. WS and Min. MSLP<a class="headerlink" href="#time-series-of-max-ws-and-min-mslp" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Both GFSv16beta and GFSv15p2 generate right-of-track bias.</p></li>
+<li><p>Hurricane track and intensity simulated by GFSv15p2 are closer to BestTrack compared with GFSv16beta.</p></li>
+</ul>
 <p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_images/tracker_ws_Barry_ufsv1.png"><img alt="logo1" class="align-middle" src="_images/tracker_ws_Barry_ufsv1.png" style="width: 600px;" /></a></p></td>
-<td><p><a class="reference internal" href="_images/tracker_mslp_Barry_ufsv1.png"><img alt="logo2" class="align-top" src="_images/tracker_mslp_Barry_ufsv1.png" style="width: 600px;" /></a></p></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/tracker_ws_mslp_Barry.png"><img alt="_images/tracker_ws_mslp_Barry.png" src="_images/tracker_ws_mslp_Barry.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">Time series of the vortex maximum surface wind speed (WS, left panel) and minimum mean sea level pressure (MSLP, right panel)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="comparison-with-satellite-image-f072">
-<h3><span class="section-number">2.2.3. </span>Comparison with Satellite Image (f072)<a class="headerlink" href="#comparison-with-satellite-image-f072" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.2. </span>Comparison with Satellite Image (f072)<a class="headerlink" href="#comparison-with-satellite-image-f072" title="Permalink to this headline">¶</a></h3>
 <p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_images/FV3_OLR_00zJul11_12zJul14_GFS_f72_v16beta.png"><img alt="logo3" class="align-middle" src="_images/FV3_OLR_00zJul11_12zJul14_GFS_f72_v16beta.png" style="width: 600px;" /></a></p></td>
-<td><p><a class="reference internal" href="_images/FV3_OLR_00zJul11_12zJul14_GFS_f72_15p2.png"><img alt="logo4" class="align-middle" src="_images/FV3_OLR_00zJul11_12zJul14_GFS_f72_15p2.png" style="width: 600px;" /></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_images/worldview_2019071400.png"><img alt="logo5" class="align-middle" src="_images/worldview_2019071400.png" style="width: 600px;" /></a></p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/Satellite_OLR.png"><img alt="_images/Satellite_OLR.png" src="_images/Satellite_OLR.png" style="width: 1600px;" /></a>
+<p class="caption"><span class="caption-text">Simulated outgoing longwave radiation (OLR) at the top of atmosphere (TOA) from GFSv16beta and GFSv15p2, and infrared images from <a class="reference external" href="https://worldview.earthdata.nasa.gov/">NASA Worldview</a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Comparison with satellite product also indicates a right-of-track error</p></li>
+<li><p>Lower OLR near the tropical cyclone (TC) center suggests more clouds in GFSv15p2 than in GFSv16beta</p></li>
+</ul>
 </div>
 <div class="section" id="hovmoller-diagram-of-850-hpa-ws-after-landfall">
-<h3><span class="section-number">2.2.4. </span>Hovmöller diagram of 850 hPa WS after Landfall<a class="headerlink" href="#hovmoller-diagram-of-850-hpa-ws-after-landfall" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.3. </span>Hovmöller diagram of 850 hPa WS after Landfall<a class="headerlink" href="#hovmoller-diagram-of-850-hpa-ws-after-landfall" title="Permalink to this headline">¶</a></h3>
 <p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_images/Ufs_GFS_v16beta_cross_WS_radial_timeseries.png"><img alt="logo6" class="align-middle" src="_images/Ufs_GFS_v16beta_cross_WS_radial_timeseries.png" style="width: 600px;" /></a></p></td>
-<td><p><a class="reference internal" href="_images/Ufs_GFS_15p2_cross_WS_radial_timeseries.png"><img alt="logo7" class="align-middle" src="_images/Ufs_GFS_15p2_cross_WS_radial_timeseries.png" style="width: 600px;" /></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_images/Ufs_GFS_GFS_NCEP_cross_WS_radial_timeseries.png"><img alt="logo8" class="align-top" src="_images/Ufs_GFS_GFS_NCEP_cross_WS_radial_timeseries.png" style="width: 600px;" /></a></p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/Radial_WS_TimeSeries.png"><img alt="_images/Radial_WS_TimeSeries.png" src="_images/Radial_WS_TimeSeries.png" style="width: 1600px;" /></a>
+<p class="caption"><span class="caption-text">Hovmöller diagram of wind speed and 850hPa and the radius of maximum wind (RMW, white line) after landfall</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>The low-level wind speed in GFS model is smaller than GFS_ANL</p></li>
+<li><p>The GFSv16beta has the largest inner core size. GFS15p2 has similar inner core sizes and GFS_ANL</p></li>
+<li><p>Hurricane intensity attenuates faster in the model compared with BestTrack after landfall</p></li>
+</ul>
 </div>
 </div>
 </div>

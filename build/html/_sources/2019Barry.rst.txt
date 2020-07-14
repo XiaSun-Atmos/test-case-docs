@@ -2,6 +2,23 @@
    sphinx-quickstart on Mon Jul  6 13:31:15 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+.. raw:: html
+
+    <style> .red {color:red} 
+    .green{color:green}
+    .cyan{color:#00D7D7}
+    .purple{color:purple}
+    .blue{color:blue}
+    .yellow{color:#CDCD00}
+
+    </style>
+
+.. role:: red
+.. role:: green
+.. role:: cyan
+.. role:: purple
+.. role:: blue
+.. role:: yellow
 
 
 2019 Hurricane Barry
@@ -32,76 +49,54 @@ Case Results
 ==============================
 Hurricane Track and Intensity
 ==============================
-:download:`Source script <../script/hurrican_track_intensity.py>`
+:download:`Source script <../script/hurricane_track_intensity.py>`
 
 .. figure:: images/tracker_Barry_ufsv1.png
-  :width: 500
+  :width: 400
   :align: center
 
-====================================
-Time Series of Max. WS and Min. MSLP
-====================================
-:download:`Source script <../script/hurrican_track_intensity.py>`
+  Hurricane tracks from GFSv16beta (red dashline), GFSv15p2 (blue dash line), and BestTrack (black dash line). The dots are color coded with the vortex maximum 10-m wind speed (WS, kt). 
 
-.. |logo1| image:: images/tracker_ws_Barry_ufsv1.png   
-   :width: 600
-   :align: middle
+* Both GFSv16beta and GFSv15p2 generate right-of-track bias. 
+* Hurricane track and intensity simulated by GFSv15p2 are closer to BestTrack compared with GFSv16beta. 
 
+:download:`Source script <../script/hurricane_track_intensity.py>`
 
-.. |logo2| image:: images/tracker_mslp_Barry_ufsv1.png
-   :width: 600
-   :align: top
+.. figure:: images/tracker_ws_mslp_Barry.png
+  :width: 1200
+  :align: center
 
-+---------+---------+
-| |logo1| | |logo2| |
-+---------+---------+
+  Time series of the vortex maximum surface wind speed (WS, left panel) and minimum mean sea level pressure (MSLP, right panel)
 
 ====================================
 Comparison with Satellite Image (f072)
 ====================================
-:download:`Source script <../script/hurrican_track_intensity.py>`
+:download:`Source script <../script/hurricane_track_intensity.py>`
 
-.. |logo3| image:: images/FV3_OLR_00zJul11_12zJul14_GFS_f72_v16beta.png  
-   :width: 600
-   :align: middle
+.. figure:: images/Satellite_OLR.png
+  :width: 1600
+  :align: center
 
+  Simulated outgoing longwave radiation (OLR) at the top of atmosphere (TOA) from GFSv16beta and GFSv15p2, and infrared images from `NASA Worldview <https://worldview.earthdata.nasa.gov/>`_ 
 
-.. |logo4| image:: images/FV3_OLR_00zJul11_12zJul14_GFS_f72_15p2.png 
-   :width: 600
-   :align: middle
-
-.. |logo5| image:: images/worldview_2019071400.png 
-   :width: 600
-   :align: middle
-
-+---------+---------+
-| |logo3| | |logo4| |
-+---------+---------+
-| |logo5| |         |
-+---------+---------+
+* Comparison with satellite product also indicates a right-of-track error
+* Lower OLR near the tropical cyclone (TC) center suggests more clouds in GFSv15p2 than in GFSv16beta 
 
 =============================================
 Hovmöller diagram of 850 hPa WS after Landfall
 =============================================
-:download:`Source script <../script/hurrican_track_intensity.py>`
+:download:`Source script <../script/hurricane_track_intensity.py>`
 
-.. |logo6| image:: images/Ufs_GFS_v16beta_cross_WS_radial_timeseries.png  
-   :width: 600
-   :align: middle
+.. figure:: images/Radial_WS_TimeSeries.png
+  :width: 1600
+  :align: center
+
+  Hovmöller diagram of wind speed and 850hPa and the radius of maximum wind (RMW, white line) after landfall
+
+* The low-level wind speed in GFS model is smaller than GFS_ANL
+* The GFSv16beta has the largest inner core size. GFS15p2 has similar inner core sizes and GFS_ANL 
+* Hurricane intensity attenuates faster in the model compared with BestTrack after landfall 
 
 
-.. |logo7| image:: images/Ufs_GFS_15p2_cross_WS_radial_timeseries.png 
-   :width: 600
-   :align: middle
-
-.. |logo8| image:: images/Ufs_GFS_GFS_NCEP_cross_WS_radial_timeseries.png 
-   :width: 600
-   :align: top
-
-+---------+---------+
-| |logo6| | |logo7| |
-+---------+---------+
-| |logo8| |         |
-+---------+---------+
 
 

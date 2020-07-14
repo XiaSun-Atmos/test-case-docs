@@ -11,6 +11,7 @@ Welcome to the Test Cases Page for the UFS weather model
    :align: middle
 
 
+
 .. |logo2| image:: images/Diff_FV3_T2_20200121_1200_GFSv16beta.png
    :width: 300
    :align: top
@@ -22,6 +23,7 @@ Welcome to the Test Cases Page for the UFS weather model
 +---------+---------+---------+
 | |logo1| | |logo2| | |logo3| |
 +---------+---------+---------+
+
 
 :Release:  *ufs-v1.0*
 :Compsets:  ``GFSv16beta``, ``GFSv15p2``
