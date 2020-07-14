@@ -68,7 +68,7 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'sphinx.ext.autodoc',
-    'sphinx_rtd_theme',
+#    'sphinx_rtd_theme',
 #    'sphinx_gallery.gen_gallery',
 #    'sphinx-prompt',
 ]
