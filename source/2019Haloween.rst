@@ -35,92 +35,45 @@ Case Results
 ======================================================
 :download:`Source script <../script/hurrican_track_intensity.py>`
 
-.. |logo1| image:: images/500mb_2019110100_16beta_150s.png   
-   :width: 600
-   :align: middle
+.. figure:: images/500mb_2019110100_150s.png
+  :width: 1200
+  :align: center
 
+  500 hPa geopotential heights (Dam), absolute vorticity ( 10 :sup:`-5`/s), and winds (m/s)
 
-.. |logo2| image:: images/500mb_2019110100_15p2_150s.png
-   :width: 600
-   :align: top
+* GFSv15p2 generates a progressive synoptic pattern compared with reanalysis data. 
+* GFSv16beta alleviates the progressiveness of synoptic pattern.
 
-.. |logo3| image:: images/500mb_2019110100_NAM.png
-   :width: 600
-   :align: top
+====================================
+Surface Gust and 2-m Temperature
+====================================
+:download:`Source script <../script/hurrican_track_intensity.py>`
 
-+---------+---------+
-| |logo1| | |logo2| |
-+---------+---------+
-| |logo3| |         |
-+---------+---------+
+.. figure:: images/Halloween_f156_GUST_surface.png
+  :width: 1200
+  :align: center
+
+  Surface gust (m/s) valid at 00z 1 Nov 2019
+
+* GFSv15p2 captures the magnitudes of surface gust in GFS_ANL. 
+* GFSv16beta does not reach the peak of surface gust in GFS_ANL. 
+  
+.. figure:: images/Haloween_f156_TMP_2maboveground.png
+  :width: 1200
+  :align: center
+
+  2-m temperature (K) valid at 00z 1 Nov 2019 
+
+* Temperature drops earlier in GFSv15p2 along the U.S. east coast compared with GFS_ANL.  
+* Temperature drops later in GFSv16beta at Gorgia and Carolina compared with GFS_ANL. 
 
 ====================================
 Composite Reflectivity
 ====================================
 :download:`Source script <../script/hurrican_track_intensity.py>`
 
-.. |logo4| image:: images/GFS16beta_f156_REFC_entireatmosphere.png  
-   :width: 600
-   :align: middle
+.. figure:: images/Halloween_f156_REFC_entireatmosphere.png
+  :width: 1200
+  :align: center
 
-.. |logo5| image:: images/GFS15p2_f156_REFC_entireatmosphere.png
-   :width: 600
-   :align: top
-
-.. |logo6| image:: images/GFSANL_00z1Nov_REFC_entireatmosphere.png
-   :width: 600
-   :align: top
-
-+---------+---------+
-| |logo4| | |logo5| |
-+---------+---------+
-| |logo6| |         |
-+---------+---------+
-
-====================================
-Surface Gust
-====================================
-:download:`Source script <../script/hurrican_track_intensity.py>`
-
-.. |logo7| image:: images/GFS16beta_f156_GUST_surface.png  
-   :width: 600
-   :align: middle
-
-
-.. |logo8| image:: images/GFS15p2_f156_GUST_surface.png
-   :width: 600
-   :align: top
-
-.. |logo9| image:: images/GFSANL_00z1Nov_GUST_surface.png
-   :width: 600
-   :align: top
-
-+---------+---------+
-| |logo7| | |logo8| |
-+---------+---------+
-| |logo9| |         |
-+---------+---------+
-
-====================================
-2-m Temperature
-====================================
-:download:`Source script <../script/hurrican_track_intensity.py>`
-
-.. |logo10| image:: images/GFS16beta_f156_TMP_2maboveground.png  
-   :width: 600
-   :align: middle
-
-
-.. |logo11| image:: images/GFS15p2_f156_TMP_2maboveground.png 
-   :width: 600
-   :align: middle
-
-.. |logo12| image:: images/GFSANL_00z1Nov_TMP_2maboveground.png 
-   :width: 600
-   :align: top
-
-+----------+----------+
-| |logo10| | |logo11| |
-+----------+----------+
-| |logo12| |          |
-+----------+----------+
+  Composite reflectivity (dB)

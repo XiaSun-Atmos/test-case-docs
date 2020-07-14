@@ -69,7 +69,7 @@ Hurricane Track and Intensity
   Time series of the vortex maximum surface wind speed (WS, left panel) and minimum mean sea level pressure (MSLP, right panel)
 
 ====================================
-Comparison with Satellite Image (f072)
+Comparison with Satellite Data
 ====================================
 :download:`Source script <../script/hurricane_track_intensity.py>`
 
@@ -77,7 +77,7 @@ Comparison with Satellite Image (f072)
   :width: 1600
   :align: center
 
-  Simulated outgoing longwave radiation (OLR) at the top of atmosphere (TOA) from GFSv16beta and GFSv15p2, and infrared images from `NASA Worldview <https://worldview.earthdata.nasa.gov/>`_ 
+  Simulated outgoing longwave radiation (OLR) at the top of atmosphere (TOA) from GFSv16beta and GFSv15p2, and infrared images from `NASA Worldview <https://worldview.earthdata.nasa.gov/>`_ at the forecast hour of 72.
 
 * Comparison with satellite product also indicates a right-of-track error
 * Lower OLR near the tropical cyclone (TC) center suggests more clouds in GFSv15p2 than in GFSv16beta 

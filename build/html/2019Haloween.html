@@ -90,9 +90,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#model-configuration-and-datasets">3.1. Model Configuration and Datasets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#case-results">3.2. Case Results</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#mb-geopotentail-height-and-aboslute-vorticity-map">3.2.1. 500mb Geopotentail Height and Aboslute Vorticity Map</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#composite-reflectivity">3.2.2. Composite Reflectivity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#surface-gust">3.2.3. Surface Gust</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#m-temperature">3.2.4. 2-m Temperature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#surface-gust-and-2-m-temperature">3.2.2. Surface Gust and 2-m Temperature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#composite-reflectivity">3.2.3. Composite Reflectivity</a></li>
 </ul>
 </li>
 </ul>
@@ -185,74 +184,42 @@
 <div class="section" id="mb-geopotentail-height-and-aboslute-vorticity-map">
 <h3><span class="section-number">3.2.1. </span>500mb Geopotentail Height and Aboslute Vorticity Map<a class="headerlink" href="#mb-geopotentail-height-and-aboslute-vorticity-map" title="Permalink to this headline">¶</a></h3>
 <p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_images/500mb_2019110100_16beta_150s.png"><img alt="logo1" class="align-middle" src="_images/500mb_2019110100_16beta_150s.png" style="width: 600px;" /></a></p></td>
-<td><p><a class="reference internal" href="_images/500mb_2019110100_15p2_150s.png"><img alt="logo2" class="align-top" src="_images/500mb_2019110100_15p2_150s.png" style="width: 600px;" /></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_images/500mb_2019110100_NAM.png"><img alt="logo3" class="align-top" src="_images/500mb_2019110100_NAM.png" style="width: 600px;" /></a></p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/500mb_2019110100_150s.png"><img alt="_images/500mb_2019110100_150s.png" src="_images/500mb_2019110100_150s.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">500 hPa geopotential heights (Dam), absolute vorticity ( 10 <sup>-5</sup>/s), and winds (m/s)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>GFSv15p2 generates a progressive synoptic pattern compared with reanalysis data.</p></li>
+<li><p>GFSv16beta alleviates the progressiveness of synoptic pattern.</p></li>
+</ul>
+</div>
+<div class="section" id="surface-gust-and-2-m-temperature">
+<h3><span class="section-number">3.2.2. </span>Surface Gust and 2-m Temperature<a class="headerlink" href="#surface-gust-and-2-m-temperature" title="Permalink to this headline">¶</a></h3>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/Halloween_f156_GUST_surface.png"><img alt="_images/Halloween_f156_GUST_surface.png" src="_images/Halloween_f156_GUST_surface.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">Surface gust (m/s) valid at 00z 1 Nov 2019</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>GFSv15p2 captures the magnitudes of surface gust in GFS_ANL.</p></li>
+<li><p>GFSv16beta does not reach the peak of surface gust in GFS_ANL.</p></li>
+</ul>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/Haloween_f156_TMP_2maboveground.png"><img alt="_images/Haloween_f156_TMP_2maboveground.png" src="_images/Haloween_f156_TMP_2maboveground.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">2-m temperature (K) valid at 00z 1 Nov 2019</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Temperature drops earlier in GFSv15p2 along the U.S. east coast compared with GFS_ANL.</p></li>
+<li><p>Temperature drops later in GFSv16beta at Gorgia and Carolina compared with GFS_ANL.</p></li>
+</ul>
 </div>
 <div class="section" id="composite-reflectivity">
-<h3><span class="section-number">3.2.2. </span>Composite Reflectivity<a class="headerlink" href="#composite-reflectivity" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.2.3. </span>Composite Reflectivity<a class="headerlink" href="#composite-reflectivity" title="Permalink to this headline">¶</a></h3>
 <p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_images/GFS16beta_f156_REFC_entireatmosphere.png"><img alt="logo4" class="align-middle" src="_images/GFS16beta_f156_REFC_entireatmosphere.png" style="width: 600px;" /></a></p></td>
-<td><p><a class="reference internal" href="_images/GFS15p2_f156_REFC_entireatmosphere.png"><img alt="logo5" class="align-top" src="_images/GFS15p2_f156_REFC_entireatmosphere.png" style="width: 600px;" /></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_images/GFSANL_00z1Nov_REFC_entireatmosphere.png"><img alt="logo6" class="align-top" src="_images/GFSANL_00z1Nov_REFC_entireatmosphere.png" style="width: 600px;" /></a></p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/Halloween_f156_REFC_entireatmosphere.png"><img alt="_images/Halloween_f156_REFC_entireatmosphere.png" src="_images/Halloween_f156_REFC_entireatmosphere.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">Composite reflectivity (dB)</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="surface-gust">
-<h3><span class="section-number">3.2.3. </span>Surface Gust<a class="headerlink" href="#surface-gust" title="Permalink to this headline">¶</a></h3>
-<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_images/GFS16beta_f156_GUST_surface.png"><img alt="logo7" class="align-middle" src="_images/GFS16beta_f156_GUST_surface.png" style="width: 600px;" /></a></p></td>
-<td><p><a class="reference internal" href="_images/GFS15p2_f156_GUST_surface.png"><img alt="logo8" class="align-top" src="_images/GFS15p2_f156_GUST_surface.png" style="width: 600px;" /></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_images/GFSANL_00z1Nov_GUST_surface.png"><img alt="logo9" class="align-top" src="_images/GFSANL_00z1Nov_GUST_surface.png" style="width: 600px;" /></a></p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="m-temperature">
-<h3><span class="section-number">3.2.4. </span>2-m Temperature<a class="headerlink" href="#m-temperature" title="Permalink to this headline">¶</a></h3>
-<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_images/GFS16beta_f156_TMP_2maboveground.png"><img alt="logo10" class="align-middle" src="_images/GFS16beta_f156_TMP_2maboveground.png" style="width: 600px;" /></a></p></td>
-<td><p><a class="reference internal" href="_images/GFS15p2_f156_TMP_2maboveground.png"><img alt="logo11" class="align-middle" src="_images/GFS15p2_f156_TMP_2maboveground.png" style="width: 600px;" /></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_images/GFSANL_00z1Nov_TMP_2maboveground.png"><img alt="logo12" class="align-top" src="_images/GFSANL_00z1Nov_TMP_2maboveground.png" style="width: 600px;" /></a></p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 </div>
