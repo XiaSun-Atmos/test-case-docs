@@ -7,7 +7,6 @@
 2019 Hurricane Barry
 =====================================
 
-
 Hurricane Barry made landfall in Louisiana on July 11, 2019. The peak wind speed and minimum pressure reached 72 mph and 992 hPa, respectively during the storm. 
 
 ................................
@@ -22,7 +21,7 @@ The case runs are initialized at 00z Jul 11, 2019 with 168 hours forecasting. Th
  
    ./xmlchange RUN_STARTDATE=2019-07-01,START_TOD=0,STOP_OPTION=nhours,STOP_N=168
 
-Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The Stand-alone Geophysical Fluid Dynamics Laboratory(GFDL) Vortex Tracker is a tool to estimate hurricane tracks and intensities. The `BestTrack dataset <https://domain.invalid/>`_ provides the ‘truth’ data for hurricane evolution.
+Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The `Stand-alone Geophysical Fluid Dynamics Laboratory (GFDL) Vortex Tracker <https://dtcenter.org/community-code/gfdl-vortex-tracker>`_ is a tool to estimate hurricane tracks and intensities. The `BestTrack dataset <https://domain.invalid/>`_ provides the ‘truth’ data for hurricane evolution.
 
 :download:`Initial condition files <https://domain.invalid/>`
 
@@ -72,7 +71,7 @@ Comparison with Satellite Image (f072)
    :align: middle
 
 .. |logo5| image:: images/worldview_2019071400.png 
-   :width: 250
+   :width: 600
    :align: middle
 
 +---------+---------+

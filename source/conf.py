@@ -17,6 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
 
 project = 'Test Cases for UFS Weather Model'
 copyright = '2020 '
@@ -41,14 +44,14 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
-
-autodoc_mock_imports = ['sphinx_copybutton']
+pygments_style = 'sphinx'
+#autodoc_mock_imports = ['sphinx_copybutton']
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-import sphinx_rtd_theme
+#import sphinx_rtd_theme
 master_doc = 'index'
 extensions = [
 #    'sphinx_copybutton',
@@ -65,6 +68,7 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'sphinx.ext.autodoc',
+    'sphinx_rtd_theme',
 #    'sphinx_gallery.gen_gallery',
 #    'sphinx-prompt',
 ]
@@ -73,9 +77,32 @@ extensions = [
 #    ...
 #    "sphinx_rtd_theme",
 #]
+def setup(app):
+    app.add_stylesheet('custom.css') 
+latex_engine = 'pdflatex'
+latex_elements = {
+    # The paper size ('letterpaper' or 'a4paper').
+    #
+    # 'papersize': 'letterpaper',
+
+    # The font size ('10pt', '11pt' or '12pt').
+    #
+    # 'pointsize': '10pt',
+
+    # Additional stuff for the LaTeX preamble.
+    #
+    # 'preamble': '',
+
+    # Latex figure (float) alignment
+    #
+    # 'figure_align': 'htbp',
+    #  'maketitle': r'\newcommand\sphinxbackoftitlepage{For referencing this document please use: \newline \break Author1, Author2,, 2020. UFS Medium-Range Weather App Users Guide v1.0.0. 91pp. Available at https://ufscommunity.org.}\sphinxmaketitle'
+}
 
 html_theme = "sphinx_rtd_theme"
+html_theme_options = {"body_max_width": "none"}
 html_sidebars = {}
+epub_title = project
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".

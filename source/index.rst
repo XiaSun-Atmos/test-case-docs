@@ -5,6 +5,7 @@
 
 Welcome to the Test Cases Page for the UFS weather model
 =======================================================
+
 .. |logo1| image:: images/tracker_Barry_ufsv1.png  
    :width: 300
    :align: middle
@@ -22,22 +23,26 @@ Welcome to the Test Cases Page for the UFS weather model
 | |logo1| | |logo2| | |logo3| |
 +---------+---------+---------+
 
-:Release: ufs-v1.0.0
-:Compsets: GFSv16beta, GFSv15p2
-:Date: |today|  
+
+List
+-------
+
+:Release:  *ufs-v1.0*
+:Compsets:  ``GFSv16beta``, ``GFSv15p2``
+:Date:  |today|  
 :Case Catalogue:
- * :ref:`2019 Hurricane Barry <2019 Hurricane Barry>`
- * :ref:`2019 Halloween Storm <2019 Halloween Storm>`
- * :ref:`2017 Denver Inversion <2017 Denver Inversion>`
- * :ref:`2020 Janurary Cold Bias <2020 Janurary Cold Bias>`
-   
+   * :ref:`2019 Hurricane Barry <2019 Hurricane Barry>`
+   * :ref:`2019 Halloween Storm <2019 Halloween Storm>`
+   * :ref:`2017 Denver Inversion <2017 Denver Inversion>`
+   * :ref:`2020 Janurary Cold Bias <2020 Janurary Cold Bias>`
+  
 This documentation provides resources for representative case studies in the Unified Forecast System Weather model.
 
 ..............................
 Noteable Links
 ..............................
 
-* `Developmental Testbed Center <https://www.dtcenter.org/>`_
+* `Developmental Testbed Center (DTC) <https://www.dtcenter.org/>`_
 * `Unified Forecast System (UFS) <https://ufscommunity.org/>`_
 * `The UFS Medium-Range Weather App Users Guide <https://ufs-mrweather-app.readthedocs.io/en/latest/index.html>`_
 
