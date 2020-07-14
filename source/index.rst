@@ -23,10 +23,6 @@ Welcome to the Test Cases Page for the UFS weather model
 | |logo1| | |logo2| | |logo3| |
 +---------+---------+---------+
 
-
-List
--------
-
 :Release:  *ufs-v1.0*
 :Compsets:  ``GFSv16beta``, ``GFSv15p2``
 :Date:  |today|  
