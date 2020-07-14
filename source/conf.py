@@ -68,6 +68,7 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'sphinx.ext.autodoc',
+    'sphinx_gallery.gen_gallery',
 #    'sphinx_rtd_theme',
 #    'sphinx_gallery.gen_gallery',
 #    'sphinx-prompt',
@@ -77,6 +78,12 @@ extensions = [
 #    ...
 #    "sphinx_rtd_theme",
 #]
+
+sphinx_gallery_conf = {
+     'examples_dirs': '../examples',   # path to your example scripts
+#     'gallery_dirs': 'auto_examples',  # path to where to save gallery generated output
+}
+
 def setup(app):
     app.add_stylesheet('custom.css') 
 latex_engine = 'pdflatex'

@@ -57,6 +57,7 @@ Contents
    2019Haloween.rst
    2017DenverPBL.rst
    2020ColdBias.rst
+   example.rst
 
 
 
