@@ -145,10 +145,6 @@ This script plots the 850 hPa radial wind speed with leading times. The `radialA
     end
 
 
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
-
 
 .. _sphx_glr_download_auto_examples_tc_radial_time_RMW.py:
 

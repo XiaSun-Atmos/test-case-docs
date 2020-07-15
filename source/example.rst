@@ -31,7 +31,7 @@ This page shows some example scripts using Python and NCL to plot UFS Weather Mo
 .. toctree::
    :hidden:
 
-   /auto_examples/TC_tracker_Barry_CIME
+   /TC_Tracks_Intensity
 
 .. raw:: html
 
@@ -52,7 +52,7 @@ This page shows some example scripts using Python and NCL to plot UFS Weather Mo
 .. toctree::
    :hidden:
 
-   /auto_examples/tracker_ws_Barry
+   /TC_WS_TimeSeries
 
 
 .. raw:: html
@@ -76,6 +76,47 @@ This page shows some example scripts using Python and NCL to plot UFS Weather Mo
 
    /tc_radial_time_RMW
 
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Plotting Spatial Map of 2-m Temperature">
+
+.. only:: html
+
+ .. figure:: images/FV3_T2_20200121_1200_GFSv16beta.png
+     :alt: Plotting Spatial Map of 2-m Temperature
+
+     :ref:`sphx_glr_auto_examples_Spatial_2m_T.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Spatial_2m_T
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Plotting 500mb Geopotential Height and Absolute Vorticity">
+
+.. only:: html
+
+ .. figure:: images/500mb_2019110100_GFSv16beta_150s.png
+     :alt: Plotting 500mb Geopotential Height and Absolute Vorticity"
+
+     :ref:`sphx_glr_auto_examples_500mb_HGT_ABS.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /500mb_HGT_ABS
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>

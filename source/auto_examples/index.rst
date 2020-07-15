@@ -15,6 +15,27 @@ The tutorials require the matplotlib package, which comes installed by default w
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This example plots the spatial distribution of 2-m temperature from UFS WM outputs.">
+
+.. only:: html
+
+ .. figure:: /auto_examples/images/thumb/sphx_glr_Spatial_2m_T_thumb.png
+     :alt: Plotting Spatial Map of 2-m Temperature
+
+     :ref:`sphx_glr_auto_examples_Spatial_2m_T.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/Spatial_2m_T
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This example plots time series of the maximum wind speed at the vortex center estimated from tc...">
 
 .. only:: html
@@ -33,6 +54,48 @@ The tutorials require the matplotlib package, which comes installed by default w
    :hidden:
 
    /auto_examples/tracker_ws_Barry
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example plots time series of the maximum wind speed at the vortex center estimated from tc...">
+
+.. only:: html
+
+ .. figure:: /auto_examples/images/thumb/sphx_glr_TC_WS_TimeSeries_thumb.png
+     :alt: Plotting Time Series of Vortex Center Max. WS
+
+     :ref:`sphx_glr_auto_examples_TC_WS_TimeSeries.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/TC_WS_TimeSeries
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example plots the 500mb geopotential height and absolute vorticity.">
+
+.. only:: html
+
+ .. figure:: /auto_examples/images/thumb/sphx_glr_500mb_HGT_ABS_thumb.png
+     :alt: Plotting 500mb Geopotential Height and Absolute Vorticity
+
+     :ref:`sphx_glr_auto_examples_500mb_HGT_ABS.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/500mb_HGT_ABS
 
 .. raw:: html
 
@@ -61,10 +124,10 @@ The tutorials require the matplotlib package, which comes installed by default w
 
 .. only:: html
 
- .. figure:: /auto_examples/images/thumb/sphx_glr_TC_tracker_Barry_CIME_thumb.png
+ .. figure:: /auto_examples/images/thumb/sphx_glr_TC_Tracks_Intensity_thumb.png
      :alt: Plotting Hurricane Track and Intensity Map
 
-     :ref:`sphx_glr_auto_examples_TC_tracker_Barry_CIME.py`
+     :ref:`sphx_glr_auto_examples_TC_Tracks_Intensity.py`
 
 .. raw:: html
 
@@ -74,7 +137,7 @@ The tutorials require the matplotlib package, which comes installed by default w
 .. toctree::
    :hidden:
 
-   /auto_examples/TC_tracker_Barry_CIME
+   /auto_examples/TC_Tracks_Intensity
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
