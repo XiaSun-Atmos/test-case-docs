@@ -15,7 +15,7 @@ import netCDF4 as nc
 from netCDF4 import Dataset
 import matplotlib.pyplot as plt
 
-#Read in NETCDF data
+# Read in NETCDF data
 fv3=nc.MFDataset('GFSv16beta/GFSPRS.GrbF156.nc')
 gridlat=fv3["latitude"][:]
 gridlon=fv3["longitude"][:]
@@ -30,11 +30,11 @@ minlat=lat.min()
 maxlon=lon.max()
 minlon=lon.min()
 
-#Define work station and output figure name
+# Define work station and output figure name
 wks_type = "png"
 wks = Ngl.open_wks(wks_type,"GFSv16beta_500mb_Hgt_Abs")
 
-#Define map resources
+# Define map resources
 mpres = Ngl.Resources()
 mpres.nglMaximize = False
 mpres.nglFrame     = False
@@ -56,15 +56,15 @@ mpres.mpUSStateLineColor="gray60"
 mpres.mpGridLineDashPattern=11
 mpres.mpGridLineColor="grey60"
 
-#Define plot resources
+# Define plot resources
 cnres                 = Ngl.Resources()
 cnres.cnLevelSelectionMode="ExplicitLevels"# Contour resources
 
-#Define color map attributes
+# Define color map attributes
 cnres.cnFillColors=["Transparent","(/1.,.9607843,.8/)","(/1,0.9019608,0.4392157/)","(/1,.8,.2/)","(/1.,0.6862745,0.2/)","(/1.,0.6,0.2/)","(/1.,0.43529412,0.2, /)","(/1.,0.33333334,0./)","(/0.9019608,0.15686275,0.11764706/)","(/0.78431374,0.11764706,0.07843138/)"]
 cnres.cnLevels    = [9,12,15,18,21,24,27,30]
 
-#Define plot resources
+# Define plot resources
 cnres.cnFillOn        = True
 cnres.cnLinesOn       = False
 cnres.cnLineLabelsOn  = False
@@ -75,7 +75,7 @@ cnres.lbOrientation   = "horizontal"
 cnres.sfXArray        = lon[:]
 cnres.sfYArray        = lat[:]
 
-#Define resources for ABSV
+# Define resources for ABSV
 cnres0=cnres
 cnres0.lbLabelFontHeightF = 0.012
 cnres0.pmLabelBarHeightF =0.1
@@ -84,7 +84,7 @@ mpres.tiMainString = "UFS_v1.0.0_GFSv16beta: 500mb Heights(dam) /Abs Vorticity (
 mpres.tiMainFontHeightF=0.012
 mpres.tiMainPosition = "Center"
 
-#Define resources for HGT
+# Define resources for HGT
 cnres1= Ngl.Resources()
 cnres1.nglDraw=False
 cnres1.nglFrame    = False
@@ -102,7 +102,7 @@ cnres1.cnLineLabelBackgroundColor= "white"#"Transparent"
 cnres1.cnLineLabelDensityF=1.5
 cnres1.cnLineLabelFontHeightF=0.008
 
-#Define resources for wind field
+# Define resources for wind field
 resources= cnres
 resources.nglDraw     = False
 resources.nglFrame    = False
@@ -115,7 +115,7 @@ resources.vfXArray=lon[:]
 resources.vfYArray=lat[:]
 resources.vcGlyphStyle = "WindBarb"
 
-#Make plots for ABSV, wind field, and HGT
+# Make plots for ABSV, wind field, and HGT
 map=Ngl.map(wks,mpres)
 pabsv=Ngl.contour(wks,absv[:,:],cnres0)
 pwb=Ngl.vector(wks,ugrd,vgrd,resources)

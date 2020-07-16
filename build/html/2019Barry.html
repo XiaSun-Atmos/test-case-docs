@@ -43,7 +43,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. 2019 Halloween Storm" href="2019Haloween.html" />
+    <link rel="next" title="3. 2018 Hurricane Michale" href="2018Michale.html" />
     <link rel="prev" title="1. Introduction" href="Intro.html" /> 
 </head>
 
@@ -101,10 +101,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2019Haloween.html">3. 2019 Halloween Storm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2017DenverPBL.html">4. 2017 Denver Inversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2020ColdBias.html">5. 2020 Janurary Cold Bias</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">6. Example scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2018Michale.html">3. 2018 Hurricane Michale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2019Haloween.html">4. 2019 Halloween Storm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2017DenverPBL.html">5. 2017 Denver Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2020ColdBias.html">6. 2020 Janurary Cold Bias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">7. Example scripts</a></li>
 </ul>
 
             
@@ -183,8 +184,8 @@
 <div class="section" id="model-configuration-and-datasets">
 <h2><span class="section-number">2.1. </span>Model Configuration and Datasets<a class="headerlink" href="#model-configuration-and-datasets" title="Permalink to this headline">¶</a></h2>
 <p>The UFS Medium-Range (MR) Weather Application (App) is used to prepare initial conditions, compile and run the UFS model, and post process the raw model outputs. Two model configuration compsets (<code class="docutils literal notranslate"><span class="pre">GFSv15p2</span></code> and <code class="docutils literal notranslate"><span class="pre">GFSv16beta</span></code>) are tested using the <em>C768</em> (~13km) spatial resolution with 64 vertical levels (default).</p>
-<p>The case runs are initialized at 00z Jul 11, 2019 with 168 hours forecasting. The app uses <code class="docutils literal notranslate"><span class="pre">./xmlchange</span></code> to change the runtime settings. The settings that need to be modified to set up the start date, start time, and run time are listed below.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmlchange <span class="nv">RUN_STARTDATE</span><span class="o">=</span><span class="m">2019</span>-07-01,START_TOD<span class="o">=</span><span class="m">0</span>,STOP_OPTION<span class="o">=</span>nhours,STOP_N<span class="o">=</span><span class="m">168</span>
+<p>The case runs are initialized at 00z Jul 11, 2019 with 120 hours forecasting. The app uses <code class="docutils literal notranslate"><span class="pre">./xmlchange</span></code> to change the runtime settings. The settings that need to be modified to set up the start date, start time, and run time are listed below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmlchange <span class="nv">RUN_STARTDATE</span><span class="o">=</span><span class="m">2019</span>-07-01,START_TOD<span class="o">=</span><span class="m">0</span>,STOP_OPTION<span class="o">=</span>nhours,STOP_N<span class="o">=</span><span class="m">120</span>
 </pre></div>
 </div>
 <p>Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The <a class="reference external" href="https://dtcenter.org/community-code/gfdl-vortex-tracker">Stand-alone Geophysical Fluid Dynamics Laboratory (GFDL) Vortex Tracker</a> is a tool to estimate hurricane tracks and intensities. The <a class="reference external" href="https://domain.invalid/">BestTrack dataset</a> provides the ‘truth’ data for hurricane evolution.</p>
@@ -247,7 +248,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="2019Haloween.html" class="btn btn-neutral float-right" title="3. 2019 Halloween Storm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="2018Michale.html" class="btn btn-neutral float-right" title="3. 2018 Hurricane Michale" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Intro.html" class="btn btn-neutral float-left" title="1. Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

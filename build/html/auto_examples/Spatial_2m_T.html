@@ -90,10 +90,11 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Intro.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2019Barry.html">2. 2019 Hurricane Barry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2019Haloween.html">3. 2019 Halloween Storm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2017DenverPBL.html">4. 2017 Denver Inversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2020ColdBias.html">5. 2020 Janurary Cold Bias</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../example.html">6. Example scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2018Michale.html">3. 2018 Hurricane Michale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2019Haloween.html">4. 2019 Halloween Storm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2017DenverPBL.html">5. 2017 Denver Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2020ColdBias.html">6. 2020 Janurary Cold Bias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">7. Example scripts</a></li>
 </ul>
 
             
@@ -174,14 +175,14 @@
 <span class="kn">from</span> <span class="nn">netCDF4</span> <span class="kn">import</span> <span class="n">Dataset</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1">#Read in NetCDF data</span>
+<span class="c1"># Read in NetCDF data</span>
 <span class="n">fv3</span><span class="o">=</span><span class="n">nc</span><span class="o">.</span><span class="n">MFDataset</span><span class="p">(</span><span class="s1">&#39;GFSv16veta/GFSPRS.GrbF96.nc&#39;</span><span class="p">)</span>
 <span class="n">tmp2m</span><span class="o">=</span><span class="n">fv3</span><span class="p">[</span><span class="s2">&quot;TMP_2maboveground&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">,:,:]</span>
 <span class="n">tmp2mF</span><span class="o">=</span><span class="p">(</span><span class="n">tmp2m</span><span class="o">-</span><span class="mf">273.15</span><span class="p">)</span><span class="o">*</span><span class="mi">9</span><span class="o">/</span><span class="mi">5</span><span class="o">+</span><span class="mi">32</span>
 <span class="n">lat</span><span class="o">=</span><span class="n">fv3</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">]</span>
 <span class="n">lon</span><span class="o">=</span><span class="n">fv3</span><span class="p">[</span><span class="s2">&quot;longitude&quot;</span><span class="p">]</span>
 
-<span class="c1">#Read in NetCDF data</span>
+<span class="c1"># Read in NetCDF data</span>
 <span class="n">wks_type</span> <span class="o">=</span> <span class="s2">&quot;png&quot;</span>
 <span class="n">wks</span> <span class="o">=</span> <span class="n">Ngl</span><span class="o">.</span><span class="n">open_wks</span><span class="p">(</span><span class="n">wks_type</span><span class="p">,</span><span class="s2">&quot;FV3_T2_20200121_1200_GFSv16beta&quot;</span><span class="p">)</span>
 <span class="n">cnres</span>                 <span class="o">=</span> <span class="n">Ngl</span><span class="o">.</span><span class="n">Resources</span><span class="p">()</span>

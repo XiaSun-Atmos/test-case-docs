@@ -131,7 +131,7 @@ This page shows some example scripts using Python and NCL to plot UFS Weather Mo
 
   .. container:: sphx-glr-download sphx-glr-download-python
 
-    :download:`Download all examples in Python/NCL source code: UFS_Examples.zip <//Users/xia.sun/Documents/FV3/RSTs/selfgit/test-case-docs/examples/UFS_Examples.zip>`
+    :download:`Download all examples in Python/NCL source code: UFS_Examples.zip <../examples/UFS_Examples.zip>`
 
 
 

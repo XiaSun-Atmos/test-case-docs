@@ -26,14 +26,14 @@ This example plots the spatial distribution of 2-m temperature from UFS WM outpu
     from netCDF4 import Dataset
     import matplotlib.pyplot as plt
 
-    #Read in NetCDF data
+    # Read in NetCDF data
     fv3=nc.MFDataset('GFSv16veta/GFSPRS.GrbF96.nc')
     tmp2m=fv3["TMP_2maboveground"][0,:,:]
     tmp2mF=(tmp2m-273.15)*9/5+32
     lat=fv3["latitude"]
     lon=fv3["longitude"]
 
-    #Read in NetCDF data
+    # Read in NetCDF data
     wks_type = "png"
     wks = Ngl.open_wks(wks_type,"FV3_T2_20200121_1200_GFSv16beta")
     cnres                 = Ngl.Resources()

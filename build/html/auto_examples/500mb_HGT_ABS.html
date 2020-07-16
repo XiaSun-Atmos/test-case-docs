@@ -90,10 +90,11 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Intro.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../2019Barry.html">2. 2019 Hurricane Barry</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2019Haloween.html">3. 2019 Halloween Storm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2017DenverPBL.html">4. 2017 Denver Inversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2020ColdBias.html">5. 2020 Janurary Cold Bias</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../example.html">6. Example scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2018Michale.html">3. 2018 Hurricane Michale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2019Haloween.html">4. 2019 Halloween Storm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2017DenverPBL.html">5. 2017 Denver Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2020ColdBias.html">6. 2020 Janurary Cold Bias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">7. Example scripts</a></li>
 </ul>
 
             
@@ -175,7 +176,7 @@
 <span class="kn">from</span> <span class="nn">netCDF4</span> <span class="kn">import</span> <span class="n">Dataset</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1">#Read in NETCDF data</span>
+<span class="c1"># Read in NETCDF data</span>
 <span class="n">fv3</span><span class="o">=</span><span class="n">nc</span><span class="o">.</span><span class="n">MFDataset</span><span class="p">(</span><span class="s1">&#39;GFSv16beta/GFSPRS.GrbF156.nc&#39;</span><span class="p">)</span>
 <span class="n">gridlat</span><span class="o">=</span><span class="n">fv3</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">][:]</span>
 <span class="n">gridlon</span><span class="o">=</span><span class="n">fv3</span><span class="p">[</span><span class="s2">&quot;longitude&quot;</span><span class="p">][:]</span>
@@ -190,11 +191,11 @@
 <span class="n">maxlon</span><span class="o">=</span><span class="n">lon</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 <span class="n">minlon</span><span class="o">=</span><span class="n">lon</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
 
-<span class="c1">#Define work station and output figure name</span>
+<span class="c1"># Define work station and output figure name</span>
 <span class="n">wks_type</span> <span class="o">=</span> <span class="s2">&quot;png&quot;</span>
 <span class="n">wks</span> <span class="o">=</span> <span class="n">Ngl</span><span class="o">.</span><span class="n">open_wks</span><span class="p">(</span><span class="n">wks_type</span><span class="p">,</span><span class="s2">&quot;GFSv16beta_500mb_Hgt_Abs&quot;</span><span class="p">)</span>
 
-<span class="c1">#Define map resources</span>
+<span class="c1"># Define map resources</span>
 <span class="n">mpres</span> <span class="o">=</span> <span class="n">Ngl</span><span class="o">.</span><span class="n">Resources</span><span class="p">()</span>
 <span class="n">mpres</span><span class="o">.</span><span class="n">nglMaximize</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">mpres</span><span class="o">.</span><span class="n">nglFrame</span>     <span class="o">=</span> <span class="kc">False</span>
@@ -216,15 +217,15 @@
 <span class="n">mpres</span><span class="o">.</span><span class="n">mpGridLineDashPattern</span><span class="o">=</span><span class="mi">11</span>
 <span class="n">mpres</span><span class="o">.</span><span class="n">mpGridLineColor</span><span class="o">=</span><span class="s2">&quot;grey60&quot;</span>
 
-<span class="c1">#Define plot resources</span>
+<span class="c1"># Define plot resources</span>
 <span class="n">cnres</span>                 <span class="o">=</span> <span class="n">Ngl</span><span class="o">.</span><span class="n">Resources</span><span class="p">()</span>
 <span class="n">cnres</span><span class="o">.</span><span class="n">cnLevelSelectionMode</span><span class="o">=</span><span class="s2">&quot;ExplicitLevels&quot;</span><span class="c1"># Contour resources</span>
 
-<span class="c1">#Define color map attributes</span>
+<span class="c1"># Define color map attributes</span>
 <span class="n">cnres</span><span class="o">.</span><span class="n">cnFillColors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Transparent&quot;</span><span class="p">,</span><span class="s2">&quot;(/1.,.9607843,.8/)&quot;</span><span class="p">,</span><span class="s2">&quot;(/1,0.9019608,0.4392157/)&quot;</span><span class="p">,</span><span class="s2">&quot;(/1,.8,.2/)&quot;</span><span class="p">,</span><span class="s2">&quot;(/1.,0.6862745,0.2/)&quot;</span><span class="p">,</span><span class="s2">&quot;(/1.,0.6,0.2/)&quot;</span><span class="p">,</span><span class="s2">&quot;(/1.,0.43529412,0.2, /)&quot;</span><span class="p">,</span><span class="s2">&quot;(/1.,0.33333334,0./)&quot;</span><span class="p">,</span><span class="s2">&quot;(/0.9019608,0.15686275,0.11764706/)&quot;</span><span class="p">,</span><span class="s2">&quot;(/0.78431374,0.11764706,0.07843138/)&quot;</span><span class="p">]</span>
 <span class="n">cnres</span><span class="o">.</span><span class="n">cnLevels</span>    <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span><span class="mi">30</span><span class="p">]</span>
 
-<span class="c1">#Define plot resources</span>
+<span class="c1"># Define plot resources</span>
 <span class="n">cnres</span><span class="o">.</span><span class="n">cnFillOn</span>        <span class="o">=</span> <span class="kc">True</span>
 <span class="n">cnres</span><span class="o">.</span><span class="n">cnLinesOn</span>       <span class="o">=</span> <span class="kc">False</span>
 <span class="n">cnres</span><span class="o">.</span><span class="n">cnLineLabelsOn</span>  <span class="o">=</span> <span class="kc">False</span>
@@ -235,7 +236,7 @@
 <span class="n">cnres</span><span class="o">.</span><span class="n">sfXArray</span>        <span class="o">=</span> <span class="n">lon</span><span class="p">[:]</span>
 <span class="n">cnres</span><span class="o">.</span><span class="n">sfYArray</span>        <span class="o">=</span> <span class="n">lat</span><span class="p">[:]</span>
 
-<span class="c1">#Define resources for ABSV</span>
+<span class="c1"># Define resources for ABSV</span>
 <span class="n">cnres0</span><span class="o">=</span><span class="n">cnres</span>
 <span class="n">cnres0</span><span class="o">.</span><span class="n">lbLabelFontHeightF</span> <span class="o">=</span> <span class="mf">0.012</span>
 <span class="n">cnres0</span><span class="o">.</span><span class="n">pmLabelBarHeightF</span> <span class="o">=</span><span class="mf">0.1</span>
@@ -244,7 +245,7 @@
 <span class="n">mpres</span><span class="o">.</span><span class="n">tiMainFontHeightF</span><span class="o">=</span><span class="mf">0.012</span>
 <span class="n">mpres</span><span class="o">.</span><span class="n">tiMainPosition</span> <span class="o">=</span> <span class="s2">&quot;Center&quot;</span>
 
-<span class="c1">#Define resources for HGT</span>
+<span class="c1"># Define resources for HGT</span>
 <span class="n">cnres1</span><span class="o">=</span> <span class="n">Ngl</span><span class="o">.</span><span class="n">Resources</span><span class="p">()</span>
 <span class="n">cnres1</span><span class="o">.</span><span class="n">nglDraw</span><span class="o">=</span><span class="kc">False</span>
 <span class="n">cnres1</span><span class="o">.</span><span class="n">nglFrame</span>    <span class="o">=</span> <span class="kc">False</span>
@@ -262,7 +263,7 @@
 <span class="n">cnres1</span><span class="o">.</span><span class="n">cnLineLabelDensityF</span><span class="o">=</span><span class="mf">1.5</span>
 <span class="n">cnres1</span><span class="o">.</span><span class="n">cnLineLabelFontHeightF</span><span class="o">=</span><span class="mf">0.008</span>
 
-<span class="c1">#Define resources for wind field</span>
+<span class="c1"># Define resources for wind field</span>
 <span class="n">resources</span><span class="o">=</span> <span class="n">cnres</span>
 <span class="n">resources</span><span class="o">.</span><span class="n">nglDraw</span>     <span class="o">=</span> <span class="kc">False</span>
 <span class="n">resources</span><span class="o">.</span><span class="n">nglFrame</span>    <span class="o">=</span> <span class="kc">False</span>
@@ -275,7 +276,7 @@
 <span class="n">resources</span><span class="o">.</span><span class="n">vfYArray</span><span class="o">=</span><span class="n">lat</span><span class="p">[:]</span>
 <span class="n">resources</span><span class="o">.</span><span class="n">vcGlyphStyle</span> <span class="o">=</span> <span class="s2">&quot;WindBarb&quot;</span>
 
-<span class="c1">#Make plots for ABSV, wind field, and HGT</span>
+<span class="c1"># Make plots for ABSV, wind field, and HGT</span>
 <span class="nb">map</span><span class="o">=</span><span class="n">Ngl</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">wks</span><span class="p">,</span><span class="n">mpres</span><span class="p">)</span>
 <span class="n">pabsv</span><span class="o">=</span><span class="n">Ngl</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">wks</span><span class="p">,</span><span class="n">absv</span><span class="p">[:,:],</span><span class="n">cnres0</span><span class="p">)</span>
 <span class="n">pwb</span><span class="o">=</span><span class="n">Ngl</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="n">wks</span><span class="p">,</span><span class="n">ugrd</span><span class="p">,</span><span class="n">vgrd</span><span class="p">,</span><span class="n">resources</span><span class="p">)</span>

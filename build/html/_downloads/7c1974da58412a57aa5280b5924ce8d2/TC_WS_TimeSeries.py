@@ -10,26 +10,26 @@ import numpy as np
 import matplotlib
 
 
-#Read GFSv15p2 vortext tracker results
+# Read GFSv15p2 vortext tracker results
 csv_file = "GFSv15p2/fort.69"
 tc = np.recfromcsv(csv_file, unpack=True, names=['stormid', 'count', 'initdate', 'constant', 'atcf', 'leadtime', 'lat','lon','ws','mslp','placehoder', 'thresh', 'neq', 'blank1', 'blank2', 'blank3','blank4','blank5','blank6','blank7'], dtype=None)
 
-#Read GFSv16beta vortext tracker results
+# Read GFSv16beta vortext tracker results
 csv_file2 = "GFSv16beta/fort.69"
 tc2 = np.recfromcsv(csv_file2, unpack=True, names=['stormid', 'count', 'initdate', 'constant', 'atcf', 'leadtime', 'lat','lon','ws','mslp','placehoder', 'thresh', 'neq', 'blank1', 'blank2', 'blank3','blank4','blank5','blank6','blank7'], dtype=None)
 
-#Read BestTrack data
+# Read BestTrack data
 bal_file ="/home/Xia.Sun/PySripts/TC_tracker/bal022019_post.dat"
 bal = np.recfromcsv(bal_file,unpack=True,delimiter=",",usecols=[0,2,6,7,8,9,10,11],names=['stormid','time','lat','lon','ws','mslp','intens','thresh'],dtype=None)
 
-#Read in wind speed from BestTrack Data
+# Read in wind speed from BestTrack Data
 balws=[]
 for k in range(len(bal.lat)):
     if bal.thresh[k] == 34 or bal.thresh[k] == 0:
         balwsd=float(bal.ws[k])
         balws.append(balwsd)
 
-#Read in wind speed from GFSv15p2
+# Read in wind speed from GFSv15p2
 encoding='utf-8'
 tcws=[]
 for j in range(len(tc.ws)):
@@ -38,7 +38,7 @@ for j in range(len(tc.ws)):
         tcwsd=float(tc.ws[j])
         tcws.append(tcwsd) 
 
-#Read in wind speed from GFSv16beta
+# Read in wind speed from GFSv16beta
 tc2ws=[]
 for j in range(len(tc2.ws)-1):
     tc2stormid=str(tc2.stormid[j],encoding)
@@ -46,10 +46,10 @@ for j in range(len(tc2.ws)-1):
         tc2wsd=float(tc2.ws[j])
         tc2ws.append(tc2wsd)
 
-#Make x axis
+# Make x axis
 t=np.arange(0,16,1)
 
-#Make the plot
+# Make the plot
 plt.figure(figsize=(8,6)) 
 plt.plot(t,tcws,'.-r',label="GFSv15p2")
 plt.plot(t,tc2ws,'.-b',label="GFSv16beta")

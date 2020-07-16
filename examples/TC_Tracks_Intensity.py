@@ -12,28 +12,28 @@ import matplotlib.cm as cm
 import matplotlib.colors as co
 import matplotlib
 
-#Define map
+# Define map
 m = Basemap(projection='cyl', \
         llcrnrlat= 25, urcrnrlat= 40, \
         llcrnrlon= -100, urcrnrlon= -80, \
         resolution='l')
 
-#Define plot size
+# Define plot size
 fig, ax = plt.subplots(figsize=(8,8))
 
-#Read GFSv15p2 vortext tracker results
+# Read GFSv15p2 vortext tracker results
 csv_file = "GFSv15p2/fort.69"
 tc = np.recfromcsv(csv_file, unpack=True, names=['stormid', 'count', 'initdate', 'constant', 'atcf', 'leadtime', 'lat','lon','ws','mslp','placehoder', 'thresh', 'neq', 'blank1', 'blank2', 'blank3','blank4','blank5','blank6','blank7'], dtype=None)
 
-#Read GFSv16beta vortext tracker results
+# Read GFSv16beta vortext tracker results
 csv_file2 = "16beta/fort.69"
 tc2 = np.recfromcsv(csv_file2, unpack=True, names=['stormid', 'count', 'initdate', 'constant', 'atcf', 'leadtime', 'lat','lon','ws','mslp','placehoder', 'thresh', 'neq', 'blank1', 'blank2', 'blank3','blank4','blank5','blank6','blank7'], dtype=None)
 
-#Read BestTrack data
+# Read BestTrack data
 bal_file ="BestTrack/bal022019_post.dat"
 bal = np.recfromcsv(bal_file,unpack=True,delimiter=",",usecols=[0,2,6,7,8,9,10,11],names=['stormid','time','lat','lon','ws','mslp','intens','thresh'],dtype=None)
 
-#Initialize blank lists
+# Initialize blank lists
 xs1 = []
 ys1 = []
 xs2 = []
@@ -52,7 +52,7 @@ bys1 = []
 ballon=[]
 ballat=[]
 
-#Prepare color map based on vortex center maximum wind speed   
+# Prepare color map based on vortex center maximum wind speed   
 cmap=plt.cm.jet
 norm=co.Normalize(vmin=9,vmax=55)
 colors=plt.cm.ScalarMappable(norm,cmap)
@@ -60,7 +60,7 @@ col=colors.to_rgba(tc.ws)
 bcol=colors.to_rgba(bal.ws)
 col2=colors.to_rgba(tc2.ws)
 
-#Read the vortex center, lat and lon, from BestTrack data  
+# Read the vortex center, lat and lon, from BestTrack data  
 for k in range(len(bal.lat)):
     if bal.thresh[k] == 34 or bal.thresh[k] == 0:
         ballon=float(bal.lon[k][1:5])*0.1*(-1)
@@ -72,7 +72,7 @@ for k in range(len(bal.lat)):
         bys1.append(latt)
 cs1=m.plot(bxs1, bys1, linestyle='--',color='Black',label='BestTrack')   
 
-#Read the vortex center, lat and lon, from BestTrack data to make colored dots along with the tracks  
+# Read the vortex center, lat and lon, from BestTrack data to make colored dots along with the tracks  
 bxs1 = []
 bys1 = []
 ballon=[]
@@ -91,7 +91,7 @@ for k in range(len(bal.lat)):
         count=count+1                     
 encoding='utf-8'
 
-#Read the vortex center, lat and lon, from tc-tracker results for GFSv15p2   
+# Read the vortex center, lat and lon, from tc-tracker results for GFSv15p2   
 for j in range(len(tc.ws)):
     tcstormid=str(tc.stormid[j],encoding)
     print(tcstormid)
@@ -105,7 +105,7 @@ for j in range(len(tc.ws)):
         ys1.append(lat)  
 cs2=m.plot(xs1, ys1, linestyle='--',color='Red',label='UFSv1.0.0_15p2_hybedmf')
 
-#Read the vortex center, lat and lon, from tc-tracker results for GFSv15p2 to make colored dots along with the tracks  
+# Read the vortex center, lat and lon, from tc-tracker results for GFSv15p2 to make colored dots along with the tracks  
 xs1 = []
 ys1 = []
 xs2 = []
@@ -127,7 +127,7 @@ for j in range(len(tc.ws)):
         count=count+1
         print(count) 
 
-#Read the vortex center, lat and lon, from tc-tracker results for GFSv16beta 
+# Read the vortex center, lat and lon, from tc-tracker results for GFSv16beta 
 for j in range(len(tc2.ws)):
     tc2stormid=str(tc2.stormid[j],encoding)
     print(tc2stormid)
@@ -141,7 +141,7 @@ for j in range(len(tc2.ws)):
         ys12.append(lat2)  
 cs22=m.plot(xs12, ys12, linestyle='--',color='Blue',label='UFSv1.0.0_16beta')
 
-#Read the vortex center, lat and lon, from tc-tracker results for GFSv16beta to make colored dots along with the tracks 
+# Read the vortex center, lat and lon, from tc-tracker results for GFSv16beta to make colored dots along with the tracks 
 xs12 = []
 ys12 = []
 xs22 = []

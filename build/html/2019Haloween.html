@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. 2019 Halloween Storm &mdash; Test Cases for UFS Weather Model 0.1 documentation</title>
+  <title>4. 2019 Halloween Storm &mdash; Test Cases for UFS Weather Model 0.1 documentation</title>
   
 
   
@@ -43,8 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. 2017 Denver Inversion" href="2017DenverPBL.html" />
-    <link rel="prev" title="2. 2019 Hurricane Barry" href="2019Barry.html" /> 
+    <link rel="next" title="5. 2017 Denver Inversion" href="2017DenverPBL.html" />
+    <link rel="prev" title="3. 2018 Hurricane Michale" href="2018Michale.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,19 +92,20 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2019Barry.html">2. 2019 Hurricane Barry</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. 2019 Halloween Storm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#model-configuration-and-datasets">3.1. Model Configuration and Datasets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#case-results">3.2. Case Results</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#mb-geopotentail-height-and-aboslute-vorticity-map">3.2.1. 500mb Geopotentail Height and Aboslute Vorticity Map</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#surface-gust-and-2-m-temperature">3.2.2. Surface Gust and 2-m Temperature</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#composite-reflectivity">3.2.3. Composite Reflectivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2018Michale.html">3. 2018 Hurricane Michale</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. 2019 Halloween Storm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#model-configuration-and-datasets">4.1. Model Configuration and Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#case-results">4.2. Case Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mb-geopotentail-height-and-aboslute-vorticity-map">4.2.1. 500mb Geopotentail Height and Aboslute Vorticity Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#surface-gust-and-2-m-temperature">4.2.2. Surface Gust and 2-m Temperature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#composite-reflectivity">4.2.3. Composite Reflectivity</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2017DenverPBL.html">4. 2017 Denver Inversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2020ColdBias.html">5. 2020 Janurary Cold Bias</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">6. Example scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2017DenverPBL.html">5. 2017 Denver Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2020ColdBias.html">6. 2020 Janurary Cold Bias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">7. Example scripts</a></li>
 </ul>
 
             
@@ -151,7 +152,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">3. </span>2019 Halloween Storm</li>
+      <li><span class="section-number">4. </span>2019 Halloween Storm</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -171,12 +172,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="halloween-storm">
-<h1><span class="section-number">3. </span>2019 Halloween Storm<a class="headerlink" href="#halloween-storm" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4. </span>2019 Halloween Storm<a class="headerlink" href="#halloween-storm" title="Permalink to this headline">¶</a></h1>
 <p>The 2019 Halloween storm stroke the eastern U.S. cities with wind gusts, thunderstorms, and flash flooding.</p>
 <div class="section" id="model-configuration-and-datasets">
-<h2><span class="section-number">3.1. </span>Model Configuration and Datasets<a class="headerlink" href="#model-configuration-and-datasets" title="Permalink to this headline">¶</a></h2>
-<p>The case runs are initialized at 12z Oct 25, 2019 with 168 hours forecasting. The corresponding namelist options that need to be changed are listed below. The app uses <code class="docutils literal notranslate"><span class="pre">./xmlchange</span></code> to change the runtime settings. The settings that need to be modified to set up the start date, start time, and run time are listed below.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmlchange <span class="nv">RUN_STARTDATE</span><span class="o">=</span><span class="m">20191025</span>,START_TOD<span class="o">=</span><span class="m">43200</span>,STOP_OPTION<span class="o">=</span>nhours,STOP_N<span class="o">=</span><span class="m">168</span>
+<h2><span class="section-number">4.1. </span>Model Configuration and Datasets<a class="headerlink" href="#model-configuration-and-datasets" title="Permalink to this headline">¶</a></h2>
+<p>The case runs are initialized at 12z Oct 25, 2019 with 120 hours forecasting. The corresponding namelist options that need to be changed are listed below. The app uses <code class="docutils literal notranslate"><span class="pre">./xmlchange</span></code> to change the runtime settings. The settings that need to be modified to set up the start date, start time, and run time are listed below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmlchange <span class="nv">RUN_STARTDATE</span><span class="o">=</span><span class="m">20191025</span>,START_TOD<span class="o">=</span><span class="m">43200</span>,STOP_OPTION<span class="o">=</span>nhours,STOP_N<span class="o">=</span><span class="m">120</span>
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -193,9 +194,9 @@
 </div></blockquote>
 </div>
 <div class="section" id="case-results">
-<h2><span class="section-number">3.2. </span>Case Results<a class="headerlink" href="#case-results" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2. </span>Case Results<a class="headerlink" href="#case-results" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="mb-geopotentail-height-and-aboslute-vorticity-map">
-<h3><span class="section-number">3.2.1. </span>500mb Geopotentail Height and Aboslute Vorticity Map<a class="headerlink" href="#mb-geopotentail-height-and-aboslute-vorticity-map" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.1. </span>500mb Geopotentail Height and Aboslute Vorticity Map<a class="headerlink" href="#mb-geopotentail-height-and-aboslute-vorticity-map" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/500mb_2019110100_150s.png"><img alt="_images/500mb_2019110100_150s.png" src="_images/500mb_2019110100_150s.png" style="width: 1200px;" /></a>
 <p class="caption"><span class="caption-text">500 hPa geopotential heights (Dam), absolute vorticity ( 10 <sup>-5</sup>/s), and winds (m/s)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
@@ -206,7 +207,7 @@
 </ul>
 </div>
 <div class="section" id="surface-gust-and-2-m-temperature">
-<h3><span class="section-number">3.2.2. </span>Surface Gust and 2-m Temperature<a class="headerlink" href="#surface-gust-and-2-m-temperature" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.2. </span>Surface Gust and 2-m Temperature<a class="headerlink" href="#surface-gust-and-2-m-temperature" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="_images/Halloween_f156_GUST_surface.png"><img alt="_images/Halloween_f156_GUST_surface.png" src="_images/Halloween_f156_GUST_surface.png" style="width: 1200px;" /></a>
 <p class="caption"><span class="caption-text">Surface gust (m/s) valid at 00z 1 Nov 2019</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
@@ -225,7 +226,7 @@
 </ul>
 </div>
 <div class="section" id="composite-reflectivity">
-<h3><span class="section-number">3.2.3. </span>Composite Reflectivity<a class="headerlink" href="#composite-reflectivity" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.3. </span>Composite Reflectivity<a class="headerlink" href="#composite-reflectivity" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="_images/Halloween_f156_REFC_entireatmosphere.png"><img alt="_images/Halloween_f156_REFC_entireatmosphere.png" src="_images/Halloween_f156_REFC_entireatmosphere.png" style="width: 1200px;" /></a>
 <p class="caption"><span class="caption-text">Composite reflectivity (dB)</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
@@ -242,10 +243,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="2017DenverPBL.html" class="btn btn-neutral float-right" title="4. 2017 Denver Inversion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="2017DenverPBL.html" class="btn btn-neutral float-right" title="5. 2017 Denver Inversion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="2019Barry.html" class="btn btn-neutral float-left" title="2. 2019 Hurricane Barry" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="2018Michale.html" class="btn btn-neutral float-left" title="3. 2018 Hurricane Michale" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

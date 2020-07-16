@@ -4,11 +4,11 @@ loadscript( "radialAvg.ncl")
 
 begin
 
-;Define plot name
+; Define plot name
 pngname="ufs_GFSv16beta_radial_ws_time_plot"
 wks=gsn_open_wks("png", pngname)
 
-;Read GFSv16beta vortext tracker results
+; Read GFSv16beta vortext tracker results
 tcfile="GFSv16beta/fort.69"
 delim=","
 tclines=asciiread(tcfile, -1, "string")
@@ -43,7 +43,7 @@ end do
 psminlat= tclat
 psminlon= tclon*(-1)+360
 
-;Use wgrib2 to convert all the GFSPRS* outputs to netcdf format, and read in all the nc files
+; Use wgrib2 to convert all the GFSPRS* outputs to netcdf format, and read in all the nc files
 ncfili=systemfunc("ls GFSv16beta/GFSPRS.GrbF*.nc")
 ncfiles=addfiles(ncfili,"r")
 
@@ -52,11 +52,11 @@ VGRD850=ncfiles[:]->VGRD_850mb
 WS850=(wind_speed(UGRD850,VGRD850))*1.944
 
 
-;Make a array for leading time after landfall from f66 to f120
+; Make a array for leading time after landfall from f66 to f120
 time=(/66,72,78,84,90,96,102,108,114,120/)
 dsizes=dimsizes(UGRD850)
 
-;Define a new array for 850 hPa wind speed, /Pressure, latitude, longitude/
+; Define a new array for 850 hPa wind speed, /Pressure, latitude, longitude/
 verTMP=new((/dsizes(0),dsizes(1),dsizes(2)/),float)
 verTMP!0 ="Pressure"
 verTMP&Pressure=time ;Trick to replace pressure with leading time data
@@ -77,7 +77,7 @@ verTMP(7,:,:)=(/WS850(7,:,:)/)
 verTMP(8,:,:)=(/WS850(8,:,:)/)
 verTMP(9,:,:)=(/WS850(9,:,:)/)
 
-;Using the radialAvg3D function from the radialAvg.ncl
+; Using the radialAvg3D function from the radialAvg.ncl
 outerRad=700.
 mergeInnerBins=True
 radiaverWS850=radialAvg3D(verTMP(:,:,:),lat,lon,verTMP&Pressure,psminlat,psminlon,outerRad,mergeInnerBins)
@@ -86,7 +86,7 @@ copy_VarCoords(radiaverWS850, radiaverWS850f)
 
 
 
-;Plot the contour field of wind speed at 850hPa
+; Plot the contour field of wind speed at 850hPa
 resx=True
 resx@gsnDraw = False
 resx@gsnFrame=False
@@ -114,7 +114,7 @@ resx@tmYLLabels=(/66,72,78,84,90,96/)
 plot=gsn_csm_contour(wks, radiaverWS850f(0:5,:), resx)
 
 
-;Overlay the whiteline of radius of the maximum wind (RMW) to the wind speed contour plot
+; Overlay the whiteline of radius of the maximum wind (RMW) to the wind speed contour plot
 res=True
 res@gsnDraw = False
 res@gsnFrame=False
