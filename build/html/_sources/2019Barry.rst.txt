@@ -40,7 +40,14 @@ The case runs are initialized at 00z Jul 11, 2019 with 168 hours forecasting. Th
 
 Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The `Stand-alone Geophysical Fluid Dynamics Laboratory (GFDL) Vortex Tracker <https://dtcenter.org/community-code/gfdl-vortex-tracker>`_ is a tool to estimate hurricane tracks and intensities. The `BestTrack dataset <https://domain.invalid/>`_ provides the ‘truth’ data for hurricane evolution.
 
-:download:`Initial condition files <https://domain.invalid/>`
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
+
+
+
+  .. container:: sphx-glr-download sphx-glr-download-python
+
+     :download:`Download initial condition files: 2019071100.gfs.nemsio.tar.gz <https://domain.invalid/>`
 
 ..............
 Case Results
@@ -49,7 +56,6 @@ Case Results
 ==============================
 Hurricane Track and Intensity
 ==============================
-:download:`Source script <../script/hurricane_track_intensity.py>`
 
 .. figure:: images/tracker_Barry_ufsv1.png
   :width: 400
@@ -60,7 +66,6 @@ Hurricane Track and Intensity
 * Both GFSv16beta and GFSv15p2 generate right-of-track bias. 
 * Hurricane track and intensity simulated by GFSv15p2 are closer to BestTrack compared with GFSv16beta. 
 
-:download:`Source script <../script/hurricane_track_intensity.py>`
 
 .. figure:: images/tracker_ws_mslp_Barry.png
   :width: 1200
@@ -71,7 +76,6 @@ Hurricane Track and Intensity
 ====================================
 Comparison with Satellite Data
 ====================================
-:download:`Source script <../script/hurricane_track_intensity.py>`
 
 .. figure:: images/Satellite_OLR.png
   :width: 1600
@@ -85,7 +89,6 @@ Comparison with Satellite Data
 =============================================
 Hovmöller diagram of 850 hPa WS after Landfall
 =============================================
-:download:`Source script <../script/hurricane_track_intensity.py>`
 
 .. figure:: images/Radial_WS_TimeSeries.png
   :width: 1600

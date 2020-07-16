@@ -176,3 +176,8 @@ plt.title('Hurricane Barry Tracks from 00Z 11 Jul to 18Z 14 Jul 2019')
 plt.colorbar(colors,fraction=0.035,pad=0.04,label='vortex maximum 10-m wind (kt)')
 plt.show()
 plt.savefig('Tracker_Barry_ufsv1.png')
+
+# %%
+# .. figure:: /auto_examples/images/thumb/sphx_glr_HurricanTrackIntensity_thumb.png
+#  :width: 600
+#  :align: center

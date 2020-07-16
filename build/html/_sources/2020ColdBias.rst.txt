@@ -21,7 +21,14 @@ The case runs are initialized at 12z Jan 17, 2020 with 168 hours forecasting. Th
 
 Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The `GFS reanalysis dataset <https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs>`_ are used as 'truth' to compare with simulation results.
 
-:download:`Initial condition files <https://domain.invalid/>`
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
+
+
+
+  .. container:: sphx-glr-download sphx-glr-download-python
+
+     :download:`Download initial condition files: 2020011712.gfs.nemsio.tar.gz <https://domain.invalid/>`
 
 ..............
 Case Results
@@ -30,7 +37,6 @@ Case Results
 ======================================================
 2-m Temperature
 ======================================================
-:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. figure:: images/FV3_T2_20200121_1200_GFS.png
   :width: 1200

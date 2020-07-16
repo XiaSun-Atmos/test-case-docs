@@ -189,6 +189,12 @@ This example plots the hurricane tracks and intensity estimated from tc-tracker 
     plt.show()
     plt.savefig('Tracker_Barry_ufsv1.png')
 
+
+.. figure:: /auto_examples/images/thumb/sphx_glr_HurricanTrackIntensity_thumb.png
+ :width: 600
+ :align: center
+
+
 .. rst-class:: sphx-glr-timing
 
    **Total running time of the script:** ( 0 minutes  0.000 seconds)

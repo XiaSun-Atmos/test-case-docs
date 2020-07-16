@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="_static/gallery-binder.css" type="text/css" />
@@ -34,6 +35,8 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -174,13 +177,18 @@
 </pre></div>
 </div>
 <p>Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The <a class="reference external" href="https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs">GFS reanalysis dataset</a> are used as ‘truth’ to compare with simulation results.</p>
-<p><a class="reference download external" download="" href="https://domain.invalid/"><code class="xref download docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">condition</span> <span class="pre">files</span></code></a></p>
+<blockquote>
+<div><div class="sphx-glr-footer class sphx-glr-footer-example docutils container">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download external" download="" href="https://domain.invalid/"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">initial</span> <span class="pre">condition</span> <span class="pre">files:</span> <span class="pre">2020011712.gfs.nemsio.tar.gz</span></code></a></p>
+</div>
+</div>
+</div></blockquote>
 </div>
 <div class="section" id="case-results">
 <h2><span class="section-number">5.2. </span>Case Results<a class="headerlink" href="#case-results" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="m-temperature">
 <h3><span class="section-number">5.2.1. </span>2-m Temperature<a class="headerlink" href="#m-temperature" title="Permalink to this headline">¶</a></h3>
-<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/FV3_T2_20200121_1200_GFS.png"><img alt="_images/FV3_T2_20200121_1200_GFS.png" src="_images/FV3_T2_20200121_1200_GFS.png" style="width: 1200px;" /></a>
 <p class="caption"><span class="caption-text">2-m temperature (K) from GFSv16beta (upper left), GFSv15p2 (upper right), GFS_ANL (lower left), and difference between GFSv16beta and GFS_ANL (lower right)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>

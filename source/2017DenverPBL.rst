@@ -21,8 +21,14 @@ The case runs are initialized at 00z Oct 16, 2017 with 168 hours forecasting. Th
 
 Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. Sounding profiles can be downloaded from the `University of Wyoming <http://weather.uwyo.edu/upperair/sounding.html>`_.
 
-:download:`Initial condition files <https://domain.invalid/>`
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
 
+
+
+  .. container:: sphx-glr-download sphx-glr-download-python
+
+     :download:`Download initial condition files: 2017101600.gfs.nemsio.tar.gz <https://domain.invalid/>`
 ..............
 Case Results
 ..............
@@ -31,7 +37,6 @@ Case Results
 Skew-T Log-P Plot
 ======================================================
 
-:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. figure:: images/2017101700_84z_DNR_GFS_Obs_indices.png
   :width: 1200

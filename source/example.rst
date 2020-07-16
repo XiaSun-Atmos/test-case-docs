@@ -21,7 +21,7 @@ This page shows some example scripts using Python and NCL to plot UFS Weather Mo
  .. figure:: /auto_examples/images/thumb/sphx_glr_HurricanTrackIntensity_thumb.png
      :alt: Plotting Hurricane Tracks and Intensity
 
-     :ref:`sphx_glr_auto_examples_TC_tracker_Barry_CIME.py`
+     :ref:`sphx_glr_auto_examples_TC_tracks_Intensity.py`
 
 .. raw:: html
 
@@ -42,7 +42,7 @@ This page shows some example scripts using Python and NCL to plot UFS Weather Mo
  .. figure:: /auto_examples/images/thumb/sphx_glr_tracker_ws_Barry_thumb.png
      :alt: Plotting Vortex Center Max. Wind Speed
 
-     :ref:`sphx_glr_auto_examples_tracker_ws_Barry.py`
+     :ref:`sphx_glr_auto_examples_TC_WS_Timeseries.py`
 
 .. raw:: html
 
@@ -131,13 +131,8 @@ This page shows some example scripts using Python and NCL to plot UFS Weather Mo
 
   .. container:: sphx-glr-download sphx-glr-download-python
 
-    :download:`Download all examples in Python source code: auto_examples_python.zip <//Users/xia.sun/Documents/FV3/RSTs/selfgit/test-case-docs/source/auto_examples/auto_examples_python.zip>`
+    :download:`Download all examples in Python/NCL source code: UFS_Examples.zip <//Users/xia.sun/Documents/FV3/RSTs/selfgit/test-case-docs/examples/UFS_Examples.zip>`
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-    :download:`Download all examples in Jupyter notebooks: auto_examples_jupyter.zip <//Users/xia.sun/Documents/FV3/RSTs/selfgit/test-case-docs/source/auto_examples/auto_examples_jupyter.zip>`
 
 
 .. only:: html

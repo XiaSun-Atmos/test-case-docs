@@ -54,7 +54,7 @@ pygments_style = 'sphinx'
 #import sphinx_rtd_theme
 master_doc = 'index'
 extensions = [
-#    'sphinx_copybutton',
+    'sphinx_copybutton',
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',

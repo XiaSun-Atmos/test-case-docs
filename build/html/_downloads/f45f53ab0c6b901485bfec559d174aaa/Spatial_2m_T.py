@@ -68,3 +68,8 @@ contour = Ngl.contour_map(wks,tmp2mF[:,:],cnres0)
 # Draw the plot
 Ngl.draw(contour)
 Ngl.end()
+
+# %%
+# .. figure:: /images/FV3_T2_20200121_1200_GFSv16beta.png
+#  :width: 600
+#  :align: center

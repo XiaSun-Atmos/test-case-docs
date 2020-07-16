@@ -24,8 +24,14 @@ The case runs are initialized at 12z Oct 25, 2019 with 168 hours forecasting. Th
 
 Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The `GFS reanalysis dataset <https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs>`_ are used as 'truth' to compare with simulation results.
 
-:download:`Initial condition files <https://domain.invalid/>`
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
 
+
+
+  .. container:: sphx-glr-download sphx-glr-download-python
+
+     :download:`Download initial condition files: 2019102512.gfs.nemsio.tar.gz <https://domain.invalid/>`
 ..............
 Case Results
 ..............
@@ -33,7 +39,6 @@ Case Results
 ======================================================
 500mb Geopotentail Height and Aboslute Vorticity Map
 ======================================================
-:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. figure:: images/500mb_2019110100_150s.png
   :width: 1200
@@ -47,7 +52,6 @@ Case Results
 ====================================
 Surface Gust and 2-m Temperature
 ====================================
-:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. figure:: images/Halloween_f156_GUST_surface.png
   :width: 1200
@@ -70,7 +74,6 @@ Surface Gust and 2-m Temperature
 ====================================
 Composite Reflectivity
 ====================================
-:download:`Source script <../script/hurrican_track_intensity.py>`
 
 .. figure:: images/Halloween_f156_REFC_entireatmosphere.png
   :width: 1200

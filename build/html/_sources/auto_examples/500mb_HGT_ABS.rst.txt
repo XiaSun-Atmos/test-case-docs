@@ -141,6 +141,12 @@ This example plots the 500mb geopotential height and absolute vorticity.
     Ngl.frame(wks)
     Ngl.end()
 
+
+.. figure:: /images/500mb_2019110100_GFSv16beta_150s.png
+ :width: 600
+ :align: center
+
+
 .. rst-class:: sphx-glr-timing
 
    **Total running time of the script:** ( 0 minutes  0.000 seconds)

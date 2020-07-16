@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="_static/gallery-binder.css" type="text/css" />
@@ -34,6 +35,8 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -181,13 +184,18 @@
 <p>The model run time step is reduced from the default 225s to 150s in this case due to the model instability in GFSv16beta. To set the time step, add <code class="docutils literal notranslate"><span class="pre">dt_atmos=150</span></code> to <code class="docutils literal notranslate"><span class="pre">user_nl_ufsatm</span></code></p>
 </div>
 <p>Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The <a class="reference external" href="https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs">GFS reanalysis dataset</a> are used as ‘truth’ to compare with simulation results.</p>
-<p><a class="reference download external" download="" href="https://domain.invalid/"><code class="xref download docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">condition</span> <span class="pre">files</span></code></a></p>
+<blockquote>
+<div><div class="sphx-glr-footer class sphx-glr-footer-example docutils container">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download external" download="" href="https://domain.invalid/"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">initial</span> <span class="pre">condition</span> <span class="pre">files:</span> <span class="pre">2019102512.gfs.nemsio.tar.gz</span></code></a></p>
+</div>
+</div>
+</div></blockquote>
 </div>
 <div class="section" id="case-results">
 <h2><span class="section-number">3.2. </span>Case Results<a class="headerlink" href="#case-results" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="mb-geopotentail-height-and-aboslute-vorticity-map">
 <h3><span class="section-number">3.2.1. </span>500mb Geopotentail Height and Aboslute Vorticity Map<a class="headerlink" href="#mb-geopotentail-height-and-aboslute-vorticity-map" title="Permalink to this headline">¶</a></h3>
-<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/500mb_2019110100_150s.png"><img alt="_images/500mb_2019110100_150s.png" src="_images/500mb_2019110100_150s.png" style="width: 1200px;" /></a>
 <p class="caption"><span class="caption-text">500 hPa geopotential heights (Dam), absolute vorticity ( 10 <sup>-5</sup>/s), and winds (m/s)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
@@ -199,7 +207,6 @@
 </div>
 <div class="section" id="surface-gust-and-2-m-temperature">
 <h3><span class="section-number">3.2.2. </span>Surface Gust and 2-m Temperature<a class="headerlink" href="#surface-gust-and-2-m-temperature" title="Permalink to this headline">¶</a></h3>
-<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="_images/Halloween_f156_GUST_surface.png"><img alt="_images/Halloween_f156_GUST_surface.png" src="_images/Halloween_f156_GUST_surface.png" style="width: 1200px;" /></a>
 <p class="caption"><span class="caption-text">Surface gust (m/s) valid at 00z 1 Nov 2019</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
@@ -219,7 +226,6 @@
 </div>
 <div class="section" id="composite-reflectivity">
 <h3><span class="section-number">3.2.3. </span>Composite Reflectivity<a class="headerlink" href="#composite-reflectivity" title="Permalink to this headline">¶</a></h3>
-<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="_images/Halloween_f156_REFC_entireatmosphere.png"><img alt="_images/Halloween_f156_REFC_entireatmosphere.png" src="_images/Halloween_f156_REFC_entireatmosphere.png" style="width: 1200px;" /></a>
 <p class="caption"><span class="caption-text">Composite reflectivity (dB)</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>

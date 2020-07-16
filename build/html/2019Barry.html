@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="_static/gallery-binder.css" type="text/css" />
@@ -34,6 +35,8 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -185,13 +188,18 @@
 </pre></div>
 </div>
 <p>Initial condition (IC)  files are created from GFS reanalysis dataset in nemsio format. The <a class="reference external" href="https://dtcenter.org/community-code/gfdl-vortex-tracker">Stand-alone Geophysical Fluid Dynamics Laboratory (GFDL) Vortex Tracker</a> is a tool to estimate hurricane tracks and intensities. The <a class="reference external" href="https://domain.invalid/">BestTrack dataset</a> provides the ‘truth’ data for hurricane evolution.</p>
-<p><a class="reference download external" download="" href="https://domain.invalid/"><code class="xref download docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">condition</span> <span class="pre">files</span></code></a></p>
+<blockquote>
+<div><div class="sphx-glr-footer class sphx-glr-footer-example docutils container">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download external" download="" href="https://domain.invalid/"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">initial</span> <span class="pre">condition</span> <span class="pre">files:</span> <span class="pre">2019071100.gfs.nemsio.tar.gz</span></code></a></p>
+</div>
+</div>
+</div></blockquote>
 </div>
 <div class="section" id="case-results">
 <h2><span class="section-number">2.2. </span>Case Results<a class="headerlink" href="#case-results" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="hurricane-track-and-intensity">
 <h3><span class="section-number">2.2.1. </span>Hurricane Track and Intensity<a class="headerlink" href="#hurricane-track-and-intensity" title="Permalink to this headline">¶</a></h3>
-<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/tracker_Barry_ufsv1.png"><img alt="_images/tracker_Barry_ufsv1.png" src="_images/tracker_Barry_ufsv1.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-text">Hurricane tracks from GFSv16beta (red dashline), GFSv15p2 (blue dash line), and BestTrack (black dash line). The dots are color coded with the vortex maximum 10-m wind speed (WS, kt).</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
@@ -200,7 +208,6 @@
 <li><p>Both GFSv16beta and GFSv15p2 generate right-of-track bias.</p></li>
 <li><p>Hurricane track and intensity simulated by GFSv15p2 are closer to BestTrack compared with GFSv16beta.</p></li>
 </ul>
-<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="_images/tracker_ws_mslp_Barry.png"><img alt="_images/tracker_ws_mslp_Barry.png" src="_images/tracker_ws_mslp_Barry.png" style="width: 1200px;" /></a>
 <p class="caption"><span class="caption-text">Time series of the vortex maximum surface wind speed (WS, left panel) and minimum mean sea level pressure (MSLP, right panel)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
@@ -208,7 +215,6 @@
 </div>
 <div class="section" id="comparison-with-satellite-data">
 <h3><span class="section-number">2.2.2. </span>Comparison with Satellite Data<a class="headerlink" href="#comparison-with-satellite-data" title="Permalink to this headline">¶</a></h3>
-<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="_images/Satellite_OLR.png"><img alt="_images/Satellite_OLR.png" src="_images/Satellite_OLR.png" style="width: 1600px;" /></a>
 <p class="caption"><span class="caption-text">Simulated outgoing longwave radiation (OLR) at the top of atmosphere (TOA) from GFSv16beta and GFSv15p2, and infrared images from <a class="reference external" href="https://worldview.earthdata.nasa.gov/">NASA Worldview</a> at the forecast hour of 72.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
@@ -220,7 +226,6 @@
 </div>
 <div class="section" id="hovmoller-diagram-of-850-hpa-ws-after-landfall">
 <h3><span class="section-number">2.2.3. </span>Hovmöller diagram of 850 hPa WS after Landfall<a class="headerlink" href="#hovmoller-diagram-of-850-hpa-ws-after-landfall" title="Permalink to this headline">¶</a></h3>
-<p><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">script</span></code></p>
 <div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="_images/Radial_WS_TimeSeries.png"><img alt="_images/Radial_WS_TimeSeries.png" src="_images/Radial_WS_TimeSeries.png" style="width: 1600px;" /></a>
 <p class="caption"><span class="caption-text">Hovmöller diagram of wind speed and 850hPa and the radius of maximum wind (RMW, white line) after landfall</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
