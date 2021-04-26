@@ -1,0 +1,397 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6. 2020 Easter Sunday Storm &mdash; Case Studies for UFS Weather Model 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery-dataframe.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script src="_static/sphinx_tabs/tabs.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. 2019 Memorial Day Heat Wave" href="2019MemHeat.html" />
+    <link rel="prev" title="5. 2019 Halloween Storm" href="2019HaloweenStorm.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Case Studies for UFS Weather Model
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2018Michael.html">2. 2018 Hurricane Michael</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2019Barry.html">3. 2019 Hurricane Barry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2019Lorenzo.html">4. 2019 Hurricane Lorenzo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2019HaloweenStorm.html">5. 2019 Halloween Storm</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. 2020 Easter Sunday Storm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#model-configuration-and-datasets">6.1. Model Configuration and Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#case-results">6.2. Case Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#synoptic-dynamics">6.2.1. Synoptic Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#surface-temperature-and-wind-speed">6.2.2. Surface Temperature and Wind Speed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#summary-and-discussion">6.3. Summary and Discussion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2019MemHeat.html">7. 2019 Memorial Day Heat Wave</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2020ColdBlast.html">8. 2020 January Cold Blast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2020CAD.html">9. 2020 Cold Air Damming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2020DNRInversion.html">10. 2020 Denver Radiation Inversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2020CAPE.html">11. 2020 July CAPE Case</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">12. Example scripts</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Case Studies for UFS Weather Model</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">6. </span>2020 Easter Sunday Storm</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/2020EasterStorm.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><span class="section-number">6. </span>2020 Easter Sunday Storm<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>The 2020 Easter Sunday storm is a widespread tornado outbreak that affected the Southeastern U.S on Apr 12-13.</p>
+<div class="section" id="model-configuration-and-datasets">
+<h2><span class="section-number">6.1. </span>Model Configuration and Datasets<a class="headerlink" href="#model-configuration-and-datasets" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-TVJXLnYxLjA= docutils container">
+<div class="docutils container">
+<p>MRW.v1.0</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-R0ZTLnYxNi4wLjEw docutils container">
+<div class="docutils container">
+<p>GFS.v16.0.10</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-TVJXLnYxLjA= active docutils container">
+<p>The UFS Medium-Range Weather (MRW) Application (App) is used to prepare initial conditions, compile and run the UFS model, and post process the raw model outputs. Two model configuration compsets (<code class="docutils literal notranslate"><span class="pre">GFSv15p2</span></code> and <code class="docutils literal notranslate"><span class="pre">GFSv16beta</span></code>) are tested using the <em>C768</em> (~13km) spatial resolution with 64 vertical levels (default).</p>
+<p>The case runs are initialized at 12z Apr 07, 2020 with 120 hours forecasting. The corresponding namelist options that need to be changed are listed below. The app uses <code class="docutils literal notranslate"><span class="pre">./xmlchange</span></code> to change the runtime settings. The settings that need to be modified to set up the start date, start time, and run time are listed below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./xmlchange <span class="nv">RUN_STARTDATE</span><span class="o">=</span><span class="m">20200407</span>,START_TOD<span class="o">=</span><span class="m">43200</span>,STOP_OPTION<span class="o">=</span>nhours,STOP_N<span class="o">=</span><span class="m">120</span>
+</pre></div>
+</div>
+<p>Initial condition (IC) files are created from GFS operational dataset in NEMSIO format. The <a class="reference external" href="https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs">GFS reanalysis dataset</a> are used as ‘truth’ to compare with simulation results.</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download external" download="" href="https://ufs-case-studies.s3.amazonaws.com/2020040712.gfs.nemsio.tar.gz"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">initial</span> <span class="pre">condition</span> <span class="pre">files:</span> <span class="pre">2020040712.gfs.nemsio.tar.gz</span></code></a></p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-R0ZTLnYxNi4wLjEw docutils container">
+<p>The GFS model EMC global workflow points to the most up-to-date GFS model development code. The GFS.v16.0.10 is tested in C768 (~13km) resolution and in 128 vertical levels. It uses two scripts, <code class="docutils literal notranslate"><span class="pre">setup_expt_fcstonly.py</span></code> and <code class="docutils literal notranslate"><span class="pre">setup_workflow_fcstonly.py</span></code> to set up the mode simulation date and case directories.</p>
+<p>The case runs are initialized at 12z Apr 07, 2020 with 120 hours forecasting. The settings that need to be modified to set up the start date and directories are listed below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./setup_expt_fcstonly.py --pslot 2020Easter --configdir /PATH/TO/YOUR/GLOBAL/WORKFLOW/parm/config --idate <span class="m">2020040712</span> --edate <span class="m">2020040712</span> --res <span class="m">768</span> --comrot /PATH/TO/YOUR/EXP/DIR/comrot --expdir /PATH/TO/YOUR/EXP/OUTPUT/expdir
+</pre></div>
+</div>
+<p>The account and simulation duration time can be set up in <code class="docutils literal notranslate"><span class="pre">/expdir/2020Easter/config.base</span></code> file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./setup_workflow_fcstonly.py --expdir /PATH/TO/YOUR/OUTPUT/expdir/2020Easter
+</pre></div>
+</div>
+<p>Next step is to go to <code class="docutils literal notranslate"><span class="pre">/expdir/2020Easter</span></code> to submit the run by</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>crontab 2020Easter.crontab
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="case-results">
+<h2><span class="section-number">6.2. </span>Case Results<a class="headerlink" href="#case-results" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="synoptic-dynamics">
+<h3><span class="section-number">6.2.1. </span>Synoptic Dynamics<a class="headerlink" href="#synoptic-dynamics" title="Permalink to this headline">¶</a></h3>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-TVJXLnYxLjA= docutils container">
+<div class="docutils container">
+<p>MRW.v1.0</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-R0ZTLnYxNi4wLjEw docutils container">
+<div class="docutils container">
+<p>GFS.v16.0.10</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-TVJXLnYxLjA= active docutils container">
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/MSLP_MRW_v1.0_2020EasterStorm_trim.png"><img alt="_images/MSLP_MRW_v1.0_2020EasterStorm_trim.png" src="_images/MSLP_MRW_v1.0_2020EasterStorm_trim.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">Mean sea level pressure (hPa)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>MRW_GFSv16beta more correctly forecasts the surface low compared with MRW_GFSv15p2.</p></li>
+</ul>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/500mb_MRW_v1.0_2020EasterStorm_trim.png"><img alt="_images/500mb_MRW_v1.0_2020EasterStorm_trim.png" src="_images/500mb_MRW_v1.0_2020EasterStorm_trim.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">500 hPa geopotential heights (dam) and absolute vorticity (10 <sup>-5</sup>/s)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>More positively tilted trough in MRW_GFSv15p2, suggesting a weakening weather system compared with GFS_ANL.</p></li>
+</ul>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-R0ZTLnYxNi4wLjEw docutils container">
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/MSLP_GFS.v16.0.10_2020EasterStorm_trim.png"><img alt="_images/MSLP_GFS.v16.0.10_2020EasterStorm_trim.png" src="_images/MSLP_GFS.v16.0.10_2020EasterStorm_trim.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">Mean sea level pressure (hPa)</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>GFS.v16.0.10 generates a surface low eastward of GFS_ANL.</p></li>
+<li><p>The trough in GFS.v16.0.10 moves eastwards slightly faster compared with GFS_ANL.</p></li>
+</ul>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/500mb_GFS.v16.0.10_2020EasterStorm_trim.png"><img alt="_images/500mb_GFS.v16.0.10_2020EasterStorm_trim.png" src="_images/500mb_GFS.v16.0.10_2020EasterStorm_trim.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">500 hPa geopotential heights (dam) and absolute vorticity (10 <sup>-5</sup>/s)</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>GFS.v16.0.10 generates a progressive synoptic pattern compared GFS_ANL.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="surface-temperature-and-wind-speed">
+<h3><span class="section-number">6.2.2. </span>Surface Temperature and Wind Speed<a class="headerlink" href="#surface-temperature-and-wind-speed" title="Permalink to this headline">¶</a></h3>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-TVJXLnYxLjA= docutils container">
+<div class="docutils container">
+<p>MRW.v1.0</p>
+</div>
+</div>
+<div class="item sphinx-data-tab-R0ZTLnYxNi4wLjEw docutils container">
+<div class="docutils container">
+<p>GFS.v16.0.10</p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-TVJXLnYxLjA= active docutils container">
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/2mT_MRW_v1.0_2020EasterStorm_RAP_trim.png"><img alt="_images/2mT_MRW_v1.0_2020EasterStorm_RAP_trim.png" src="_images/2mT_MRW_v1.0_2020EasterStorm_RAP_trim.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">2-m temperature (F)</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Colder 2-m T in both MRW_GFSv15p2 and MRW_GFSv16beta over central and eastern U.S.</p></li>
+</ul>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/GUST_MRW_v1.0_2020EasterStorm_RAP_trim.png"><img alt="_images/GUST_MRW_v1.0_2020EasterStorm_RAP_trim.png" src="_images/GUST_MRW_v1.0_2020EasterStorm_RAP_trim.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">Surface gust (m/s)</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Both MRW_GFSv16beta and MRW_GFSv15p2 do not captures the magnitudes of surface gust at the Gulf of Mexico and Midwest Plains.</p></li>
+</ul>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-R0ZTLnYxNi4wLjEw docutils container">
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="_images/2mT_GFS.v16.0.10_2020EasterStorm_RAP_trim.png"><img alt="_images/2mT_GFS.v16.0.10_2020EasterStorm_RAP_trim.png" src="_images/2mT_GFS.v16.0.10_2020EasterStorm_RAP_trim.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">2-m temperature (F)</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Colder 2-m T in GFS.v16.0.10 over Texas and Oklahoma compared with RAP_ANL.</p></li>
+</ul>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="_images/GUST_GFS.v16.0.10_2020EasterStorm_RAP_trim.png"><img alt="_images/GUST_GFS.v16.0.10_2020EasterStorm_RAP_trim.png" src="_images/GUST_GFS.v16.0.10_2020EasterStorm_RAP_trim.png" style="width: 1200px;" /></a>
+<p class="caption"><span class="caption-text">Surface gust (m/s)</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>GFS.v16.0.10 does not capture the magnitudes of surface gust at the Gulf of Mexico and Midwest Plains.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary-and-discussion">
+<h2><span class="section-number">6.3. </span>Summary and Discussion<a class="headerlink" href="#summary-and-discussion" title="Permalink to this headline">¶</a></h2>
+<p>The upper-level trough simulated in MRW_GFSv15p2 moves too fast northeastwards compared with GFS analysis, leading to a cold bias over the region east of the trough axis. The upper-level trough does not form over the western U.S in MRW_GFSv16beta. In GFS.v16.0.10, the synoptic pattern progressiveness still exists, although to a lesser extent.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2019MemHeat.html" class="btn btn-neutral float-right" title="7. 2019 Memorial Day Heat Wave" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2019HaloweenStorm.html" class="btn btn-neutral float-left" title="5. 2019 Halloween Storm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Development supported by Hurricane Supplemental Project Plan 1A-2-2a: Complete Hierarchical Testing Framework (HTF) architecture
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
